@@ -1,5 +1,5 @@
 
-![logo](..\images\logos_feder.png)
+![logo](../images/logos_feder.png)
 
 | Entregable     | Entregable de documentación y aplicación Benchmarks          |
 | -------------- | ------------------------------------------------------------ |
