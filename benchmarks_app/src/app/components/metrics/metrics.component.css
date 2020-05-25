@@ -1,0 +1,12 @@
+h5.card-header:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+h5 a.card-header:hover {
+    color: #ffffff;
+}
+
+a:not(.custom) {
+    color: inherit;
+}

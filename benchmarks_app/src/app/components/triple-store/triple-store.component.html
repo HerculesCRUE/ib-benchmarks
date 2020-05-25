@@ -1,0 +1,48 @@
+<div class="container m-5">
+
+<div class="row">
+  <div class="col-sm-6 p-2" *ngFor="let item of tripleStoreDataArray; index as i;">
+    <div class="card" [attr.id]='item.id'>
+      <div class="card-header">
+        <strong>{{item.name}}</strong> <img src={{item.logo}} height="30px" class="rounded float-right">
+      </div>
+      <div class="card-body">
+        <div class="row m-1">
+          <div class="col-sm-12">
+            <h6 class="card-title text-dark">Distribuidor</h6>
+            <p class="card-text">{{item.distributor}}</p>
+          </div>
+        </div>
+        <div class="row m-1">
+          <div class="col-sm-6">
+            <h6 class="card-title text-dark">Website</h6>
+            <p class="card-text"><a href="{{item.webSite}}">{{item.webSite}}</a></p>
+          </div> 
+          <div class="col-sm-6">
+            <h6 class="card-title text-dark">Documentación técnica</h6>
+            <p class="card-text"><a href="{{item.tecnicalDocumentation}}">{{item.tecnicalDocumentation}}</a></p>
+          </div> 
+        </div>
+        <div class="row m-1">
+          <div class="col-sm-12">
+            <h6 class="card-title text-dark">Descripción</h6>
+            <p class="card-text">{{item.description}}</p>
+          </div>
+        </div>
+        <div class="row m-1" *ngIf="item.commentsOfInterest">
+          <div class="col-sm-12">
+            <h6 class="card-title text-dark">Comentarios de interés</h6>
+            <p class="card-text">{{item.commentsOfInterest}}</p>
+          </div>
+        </div>
+        <div class="row m-1" *ngIf="item.caseUse">
+          <div class="col-sm-12">
+            <h6 class="card-title text-dark">Casos de uso</h6>
+            <p class="card-text">{{item.caseUse}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    

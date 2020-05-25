@@ -1,0 +1,1411 @@
+<div class="container m-5">
+
+  <div m-3>
+    <h6>Notas generales</h6>
+    <p>En esta sección se describen las métricas usadas para la realización del presente Benchmark y la memoria técnica.</p>
+    <p>Para mejorar la claridad del documento, estas han sido agrupadas, de forma que se pueda establecer un peso denominado de <strong>valoración</strong> cada uno de los grupos, y para cada una de las métricas perteneciente a un mismo grupo de forma individual.</p>
+    <p>Los pesos son ponderados (tanto para el grupo como individualmente para cada métrica dentro de un grupo, de forma que la suma de pesos para todos los grupos será 1, y la de todas las métricas individuales de un mismo grupo, también será 1.</p>
+    <p>Por otro lado, tanto para métricas individuales, como pora las de grupo se creara un peso de <strong>incertidumbre</strong> que será aplicable en caso de que no exista valor para un determinado Triple Store, ya sea en una métrica individual o en una métrica de grupo.</p>
+    <p>Como resultado final se ofrecerá una benchmark para todos los Triple Stores, ofreciendo su grado de valoración y el grado incertidumbre de forma agrupada.</p>
+    <p>Todos los pesos de valoración pueden ser configurados <a href="./"></a> </p>
+  </div>
+
+  <div>
+    <h6>Las métricas se agrupan de acuerdo a si son relativas a:</h6><br>
+
+    <div class="card">
+      <div class="card-header">
+        <h6>Memoria científico-técnica<span class="badge badge-dark float-right">12</span></h6>
+      </div>
+      <div class="card-body">
+        <h6 class="card-title">Relativas a:</h6>
+        <div id="accordion accordion-icons" id="accordionExample">
+
+          <!--Licencia-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m1" aria-expanded="false" aria-controls="m1" id="m1" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m1')"></i>
+                &nbsp;&nbsp;&nbsp;Licencia de software <span class="badge badge-dark float-right">1</span>
+              </a>
+            </h6>
+            <div id="m1" class="collapse" aria-labelledby="m1">
+              <div class="card-body">
+
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m1-c1" aria-expanded="false" aria-controls="m1-c1" id="m1-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m1-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Tipo de licencia
+                    </a>
+                  </h6>
+                  <div id="m1-c1" class="collapse" aria-labelledby="m1-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa el según el tipo de licencia de software, en principio solo distingue entre software libre (GLP) o Comercial</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store tiene licencia <strong>Comercial</strong></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store tiene licencia <strong>Comercial</strong> para últimas versiones y <strong>GLP</strong> para versiones anteriores</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store tiene licencia <strong>GLP</strong></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!--Integración Tecnica-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m2" aria-expanded="false" aria-controls="m2" id="m2" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m2')"></i>
+                &nbsp;&nbsp;&nbsp;Integración técnica <span class="badge badge-dark float-right">3</span>
+              </a>
+            </h6>
+            <div id="m2" class="collapse" aria-labelledby="m2">
+              <div class="card-body">
+
+                <!--RDF-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m2-c1" aria-expanded="false" aria-controls="m2-c1" id="m2-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m2-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Acceso programático mediante <a href="https://rdf4j.org/">RDF4J</a>
+                    </a>
+                  </h6>
+                  <div id="m2-c1" class="collapse" aria-labelledby="m2-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Es posible acceder programáticamente mediante el uso del Framework <a class="custom" href="https://rdf4j.org/">RDF4J</a> que proporciona un API Java para crear, analizar, consultar y razonar con datos <a class="custom" href="https://es.wikipedia.org/wiki/RDF">RDF</a> de forma altamente escalable</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>NO</strong> es compatible con el API RDF4J</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>SI</strong> es compatible con el API RDF4J</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--OTROS-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m2-c2" aria-expanded="false" aria-controls="m2-c2" id="m2-c2" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m2-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;Acceso programático mediante otros métodos
+                    </a>
+                  </h6>
+                  <div id="m2-c2" class="collapse" aria-labelledby="m2-c2">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Es posible acceder programáticamente, de forma que es posible acceder al Triple Store por medio de:</p>
+                      <ul>
+                        <li>APIs</li>
+                        <li>SPARQL</li>
+                        <li>Conectores ODBC</li>
+                        <li>Framework</li>
+                        <li>Otros</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2,3,4,5]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store admite <strong>0</strong> de los métodos de acceso enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store admite <strong>1</strong> de los métodos de acceso enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store admite <strong>2</strong> de los métodos de acceso enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>El Triple Store admite <strong>3</strong> de los métodos de acceso enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>El Triple Store admite <strong>4</strong> de los métodos de acceso enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>El Triple Store admite <strong>5</strong> de los métodos de acceso enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--DEPENDENCIAS-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m2-c3" aria-expanded="false" aria-controls="m2-c3" id="m2-c3" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m2-c3')"></i>
+                        &nbsp;&nbsp;&nbsp;Dependencias software
+                    </a>
+                  </h6>
+                  <div id="m2-c3" class="collapse" aria-labelledby="m2-c3">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Posibles dependencias con otros componentes de software:</p>
+                      <ul>
+                        <li>Lenguaje de programación</li>
+                        <li>Librerías</li>
+                        <li>Fremewoks</li>
+                        <li>SO</li>
+                        <li>Otros</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2,3,4,5]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store tiene <strong>5</strong> de las dependencias enumeradas</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store tiene <strong>4</strong> de las dependencias enumeradas</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store tiene <strong>3</strong> de las dependencias enumeradas</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>El Triple Store tiene <strong>2</strong> de las dependencias enumeradas</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>El Triple Store tiene <strong>1</strong> de las dependencias enumeradas</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>El Triple Store <strong>NO</strong> tiene ninguna de las dependencias enumeradas</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!--Despliegue-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m3" aria-expanded="false" aria-controls="m3" id="m3" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m3')"></i>
+                &nbsp;&nbsp;&nbsp;Despliegue <span class="badge badge-dark float-right">2</span>
+              </a>
+            </h6>
+            <div id="m3" class="collapse" aria-labelledby="m3">
+              <div class="card-body">
+                <!--Clustering-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m3-c1" aria-expanded="false" aria-controls="m3-c1" id="m3-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m3-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Clustering y alta disponibilidad
+                    </a>
+                  </h6>
+                  <div id="m3-c1" class="collapse" aria-labelledby="m3-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la capacidad del Triple Store de desplegase como un clúster  según lo siguientes criterios:</p>
+                      <ul>
+                        <li>Escalado horizontal</li>
+                        <li>Alta disponibilidad</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store cumple <strong>0</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store cumple <strong>1</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store cumple <strong>2</strong> de los criterios enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Docker-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m3-c2" aria-expanded="false" aria-controls="m3-c2" id="m3-c2" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m3-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;Disponible en contenedor Docker
+                    </a>
+                  </h6>
+                  <div id="m3-c2" class="collapse" aria-labelledby="m3-c2">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la capacidad del Triple Store de desplegase como un contenedor Docker, según lo siguientes criterios:</p>
+                      <ul>
+                        <li>Imagen Docker oficial Dockerhub</li>
+                        <li>Imagen Docker no oficial Dockerhub</li>
+                        <li>Sin magen Docker Dockerhub</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No tiene</strong> imagen Docker en Dockerhub</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si tiene</strong> imagen Docker <strong>no oficial</strong> en Dockerhub</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store <strong>Si tiene</strong> imagen Docker <strong>oficial</strong> en Dockerhub</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!--Integridad-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m4" aria-expanded="false" aria-controls="m4" id="m4" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m4')"></i>
+                &nbsp;&nbsp;&nbsp;Integridad <span class="badge badge-dark float-right">4</span>
+              </a>
+            </h6>
+            <div id="m4" class="collapse" aria-labelledby="m4">
+              <div class="card-body">
+                <!--Consistencia-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m4-c1" aria-expanded="false" aria-controls="m4-c1" id="m4-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m4-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Consistencia
+                    </a>
+                  </h6>
+                  <div id="m4-c1" class="collapse" aria-labelledby="m4-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la consistencia, especialmente en la consistencia del dato en procesos de lectura después de procesos de escritura, especialmente sensible en clusters multi-nodo:</p>
+                      <ul>
+                        <li>Consistencia eventual</li>
+                        <li>Consistencia inmediata</li>
+                        <li>Consistencia inmediata o consistencia eventual según configuración</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store ofrece consistencia eventual</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store ofrece consistencia inmediata</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store ofrece consistencia inmediata  o consistencia eventual según configuración</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--transacciones-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m4-c2" aria-expanded="false" aria-controls="m4-c2" id="m4-c2" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m4-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;Transacciones
+                    </a>
+                  </h6>
+                  <div id="m4-c2" class="collapse" aria-labelledby="m4-c2">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa Si el Triple Store es capaz de realizar transacciones <a href="https://es.wikipedia.org/wiki/ACID">ACID</a> de forma atómica sobre los datos, según lo siguientes criterios:</p>
+                      <ul>
+                        <li>Con transacciones ACID</li>
+                        <li>Sin transacciones ACID</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> realiza transacciones ACID</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si</strong> realiza transacciones ACID</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Seguridad-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m4-c3" aria-expanded="false" aria-controls="m4-c3" id="m4-c3" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m4-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;Seguridad
+                    </a>
+                  </h6>
+                  <div id="m4-c3" class="collapse" aria-labelledby="m4-c3">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa los aspectos relativos a seguridad implementados por el Triple Store, según lo siguientes criterios:</p>
+                      <ul>
+                        <li>Autentificación</li>
+                        <li>Autorización</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> implementa ninguna de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store implementa <strong>1</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store implementa <strong>2</strong> de los criterios enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Concurrencia-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m4-c4" aria-expanded="false" aria-controls="m4-c4" id="m4-c4" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m4-c4')"></i>
+                        &nbsp;&nbsp;&nbsp;Concurrencia
+                    </a>
+                  </h6>
+                  <div id="m4-c4" class="collapse" aria-labelledby="m4-c4">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la capacidad del Triple Store de gestionar acceso concurrente a el dato.</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong>.</p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> es capaz de soportar acceso concurrente al dato.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si</strong> es capaz de soportar acceso concurrente al dato.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          
+          <!--Formatos-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m5" aria-expanded="false" aria-controls="m5" id="m5" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m5')"></i>
+                &nbsp;&nbsp;&nbsp;Importación y exportación de datos <span class="badge badge-dark float-right">1</span>
+              </a>
+            </h6>
+            <div id="m5" class="collapse" aria-labelledby="m5">
+              <div class="card-body">
+
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m5-c1" aria-expanded="false" aria-controls="m5-c1" id="m5-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m5-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Funcionalidad para ingesta de datos en formatos No-RDF
+                    </a>
+                  </h6>
+                  <div id="m5-c1" class="collapse" aria-labelledby="m1-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la capacidad de ingesta de datos en formatos No RDF, según lo siguientes criterios:</p>
+                      <ul>
+                        <li>Soporta formato JSON</li>
+                        <li>Soporta formato CSV</li>
+                        <li>Soporta formato XML</li>
+                        <li>Soporta otros formatos</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2,3,4,5]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> soporta la ingesta de datos en niguno de los formatos enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store soporta la ingesta en de datos en <strong>1</strong> de los formatos enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store soporta la ingesta de datos en <strong>2</strong> de los formatos enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>El Triple Store soporta la ingesta de datos en <strong>3</strong> de los formatos enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>El Triple Store soporta la ingesta de datos en <strong>4</strong> de los formatos enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>El Triple Store soporta la ingesta de datos en <strong>todos</strong> de los formatos enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!--Funcionalidad Servidor-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m6" aria-expanded="false" aria-controls="m6" id="m6" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m6')"></i>
+                &nbsp;&nbsp;&nbsp;Funcionalidad del Servidor del Triple Store <span class="badge badge-dark float-right">2</span>
+              </a>
+            </h6>
+            <div id="m6" class="collapse" aria-labelledby="m6">
+              <div class="card-body">
+                <!--Triggers-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m6-c1" aria-expanded="false" aria-controls="m6-c1" id="m6-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m6-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;ejecución de Triggers en servidor
+                    </a>
+                  </h6>
+                  <div id="m6-c1" class="collapse" aria-labelledby="m6-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la capacidad para ejecutar triggers del lado del servidor de Triple Store</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> soporta la ejecución de Triggers del lado del servidor</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si</strong> soporta la ejecución de Triggers del lado del servidor</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!--Scripts-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m6-c2" aria-expanded="false" aria-controls="m6-c1" id="m6-c2" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m6-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;ejecución de Scripts en el servidor
+                    </a>
+                  </h6>
+                  <div id="m6-c2" class="collapse" aria-labelledby="m6-c2">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la capacidad para ejecutar Scripts del lado del servidor de Triple Store</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> soporta la ejecución de Scripts del lado del servidor</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si</strong> soporta la ejecución de Scripts del lado del servidor</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Indexación-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m7" aria-expanded="false" aria-controls="m7" id="m7" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m7')"></i>
+                &nbsp;&nbsp;&nbsp;Indexación y capacidad de búsqueda <span class="badge badge-dark float-right">2</span>
+              </a>
+            </h6>
+            <div id="m7" class="collapse" aria-labelledby="m7">
+              <div class="card-body">
+                <!--Índices secundarios-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m7-c1" aria-expanded="false" aria-controls="m7-c1" id="m7-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m7-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Índices secundarios
+                    </a>
+                  </h6>
+                  <div id="m7-c1" class="collapse" aria-labelledby="m7-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la capacidad del servidor de Triple Store para gestionar Índices secundarios que permitan acceso más rápido en la resolución de una consulta</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> soporta la definición de Índices secundarios</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si</strong> soporta la definición de Índices secundarios</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!--búsqueda por texto-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m7-c2" aria-expanded="false" aria-controls="m7-c1" id="m7-c2" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m7-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;Búsqueda por texto
+                    </a>
+                  </h6>
+                  <div id="m7-c2" class="collapse" aria-labelledby="m7-c2">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la capacidad del Triple Store para realizar búsquedas por texto apoyándose en servicios como <a class="custom" href="https://lucene.apache.org/">Apache Lucene</a> o <a class="custom" href="https://lucene.apache.org/solr/">Apache SOLR</a> </p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> soporta la búsqueda por texto apoyándose en <a class="custom" href="https://lucene.apache.org/">Apache Lucene</a> o <a class="custom" href="https://lucene.apache.org/solr/">Apache SOLR</a> </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si</strong> soporta la búsqueda por texto apoyándose en <a class="custom" href="https://lucene.apache.org/">Apache Lucene</a> o <a class="custom" href="https://lucene.apache.org/solr/">Apache SOLR</a> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Usabilidad-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m8" aria-expanded="false" aria-controls="m8" id="m8" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m8')"></i>
+                &nbsp;&nbsp;&nbsp;Usabilidad <span class="badge badge-dark float-right">3</span>
+              </a>
+            </h6>
+            <div id="m8" class="collapse" aria-labelledby="m8">
+              <div class="card-body">
+                <!--Documentación-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m8-c1" aria-expanded="false" aria-controls="m8-c1" id="m8-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m8-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Documentación adecuada
+                    </a>
+                  </h6>
+                  <div id="m8-c1" class="collapse" aria-labelledby="m8-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa documentación, según lo siguientes criterios:</p>
+                      <ul>
+                        <li>Existe documentación</li>
+                        <li>La documentación existente, es de una calidad suficiente</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store cumple <strong>0</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store cumple <strong>1</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store cumple <strong>2</strong> de los criterios enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Facilidad de uso y administración-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m8-c2" aria-expanded="false" aria-controls="m8-c2" id="m8-c2" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m8-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;Facilidad de uso y administración
+                    </a>
+                  </h6>
+                  <div id="m8-c2" class="collapse" aria-labelledby="m8-c2">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la usabilidad del triple store y la capacidad de administración, según lo siguientes criterios:</p>
+                      <ul>
+                        <li>Fácilidad de uso</li>
+                        <li>Facilidad para su adminsitración</li>
+                      </ul><h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store cumple <strong>0</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store cumple <strong>1</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store cumple <strong>2</strong> de los criterios enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Difusión-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m8-c3" aria-expanded="false" aria-controls="m8-c3" id="m8-c3" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m8-c3')"></i>
+                        &nbsp;&nbsp;&nbsp;Comunidad de usuarios
+                    </a>
+                  </h6>
+                  <div id="m8-c3" class="collapse" aria-labelledby="m8-c3">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la difusión del triple store en la comunidad de usuarios, según lo siguientes criterios:</p>
+                      <ul>
+                        <li>Usado por una amplia comunidad de usuarios</li>
+                        <li>Usado en proyectos relevantes en producción</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store cumple <strong>0</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store cumple <strong>1</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store cumple <strong>2</strong> de los criterios enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Linked Data-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m9" aria-expanded="false" aria-controls="m9" id="m9" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m9')"></i>
+                &nbsp;&nbsp;&nbsp;Funcionalidad Linked Data <span class="badge badge-dark float-right">4</span>
+              </a>
+            </h6>
+            <div id="m9" class="collapse" aria-labelledby="m9">
+              <div class="card-body">
+                <!--Razonamiento-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m9-c1" aria-expanded="false" aria-controls="m9-c1" id="m9-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m9-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Razonamiento automático
+                    </a>
+                  </h6>
+                  <div id="m9-c1" class="collapse" aria-labelledby="m9-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa la capacidad del Triple Store de realizar razonamiento automático sobre datos RDF</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store cumple <strong>No</strong> implementa razonamiento automático</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store cumple <strong>Si</strong> implementa razonamiento automático</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--SHACL-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m9-c2" aria-expanded="false" aria-controls="m9-c2" id="m9-c2" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m9-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;Validación de RDF
+                    </a>
+                  </h6>
+                  <div id="m9-c2" class="collapse" aria-labelledby="m9-c2">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica se evalúa la capacidad del Triple Store para validar los RDF entrantes mediante funcionalidades de tipo Closed World Asumption, mediante soporte a SHACL u otros medios, siguiendo los siguientes criterios:</p>
+                      <ul>
+                        <li>evaluación por SHACL</li>
+                        <li>evaluación por otros medios</li>
+                      </ul><h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store cumple <strong>0</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store cumple <strong>1</strong> de los criterios enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store cumple <strong>2</strong> de los criterios enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--RECONCILIACION-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m9-c3" aria-expanded="false" aria-controls="m9-c3" id="m9-c3" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m9-c3')"></i>
+                        &nbsp;&nbsp;&nbsp;Reconciliación de entidades
+                    </a>
+                  </h6>
+                  <div id="m9-c3" class="collapse" aria-labelledby="m9-c3">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica se evalúa la capacidad del Triple Store para realizar reconciliación de entidades como Named Entity Recognition</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> realiza reconciliación de entidades</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si</strong> realiza reconciliación de entidades</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Funciones de datos-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m9-c4" aria-expanded="false" aria-controls="m9-c4" id="m9-c4" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m9-c4')"></i>
+                        &nbsp;&nbsp;&nbsp;Funciones de datos
+                    </a>
+                  </h6>
+                  <div id="m9-c4" class="collapse" aria-labelledby="m9-c4">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica se evalúa la capacidad del Triple Store sobre funciones de datos tipo Property Graph, por ejemplo, implementando Apache Tinkerpop</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> implementa funciones de datos tipo Property Graph</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si</strong> implementa funciones de datos tipo Property Graph</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!--Protocolos-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m10" aria-expanded="false" aria-controls="m10" id="m10" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m10')"></i>
+                &nbsp;&nbsp;&nbsp;Protocolos <span class="badge badge-dark float-right">1</span>
+              </a>
+            </h6>
+            <div id="m10" class="collapse" aria-labelledby="m10">
+              <div class="card-body">
+
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m10-c1" aria-expanded="false" aria-controls="m10-c1" id="m10-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m10-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;SPARQL 1.1
+                    </a>
+                  </h6>
+                  <div id="m10-c1" class="collapse" aria-labelledby="m10-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa el cumplimiento del protocolo SPARQL 1.1</p>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store <strong>No</strong> soporta el protocolo SPARQL 1.1</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store <strong>Si</strong> soporta <strong>parcialmente</strong> el protocolo SPARQL 1.1</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store <strong>Si</strong> soporta <strong>totalmente</strong> el protocolo SPARQL 1.1</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!--Popularidad-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m11" aria-expanded="false" aria-controls="m11" id="m11" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m11')"></i>
+                &nbsp;&nbsp;&nbsp;Popularidad <span class="badge badge-dark float-right">1</span>
+              </a>
+            </h6>
+            <div id="m11" class="collapse" aria-labelledby="m11">
+              <div class="card-body">
+
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m11-c1" aria-expanded="false" aria-controls="m11-c1" id="m11-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m11-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Popularidad
+                    </a>
+                  </h6>
+                  <div id="m11-c1" class="collapse" aria-labelledby="m11-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa el nivel de popularidad, según <a href="https://db-engines.com/en/ranking/rdf+store">DB-ENGINES</a>, teniendo en cuenta criterios tales como:</p>
+                      <ul>
+                        <li>Número de menciones en sitios Web</li>
+                        <li>Interes general en el sistema</li>
+                        <li>Frecuencia de discursiones técnicas sobre el sistema</li>
+                        <li>Número de ofertas de trabajo, en las que se menciona</li>
+                        <li>Número de perfiles en redes profesionalies en los que se menciona el sistema</li>
+                        <li>Relevancia en redes sociales</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2,...,n], siendo n el número de Triple Stores analizados, ordenados en un ranking de menor a mayor</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store rankeado en <strong>última</strong> posición de los evalúados en función de su popularidad</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store rankeado en <strong>n-1</strong> posición de los evalúados en función de su popularidad</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store rankeado en <strong>n-2</strong> posición de los evalúados en función de su popularidad</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">-</th>
+                            <td> ... </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">n</th>
+                            <td>El Triple Store rankeado en <strong>1</strong> posición de los evalúados en función de su popularidad</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>    
+
+          <!--Estado-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m12" aria-expanded="false" aria-controls="m12" id="m12" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m12')"></i>
+                &nbsp;&nbsp;&nbsp;Estado del proyecto <span class="badge badge-dark float-right">2</span>
+              </a>
+            </h6>
+            <div id="m12" class="collapse" aria-labelledby="m12">
+              <div class="card-body">
+                <!--Actualización-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m12-c1" aria-expanded="false" aria-controls="m12-c1" id="m12-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m12-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Última actualización
+                    </a>
+                  </h6>
+                  <div id="m12-c1" class="collapse" aria-labelledby="m12-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa el estado de actividad del proyecto en base a la fecha de la última actualización del producto, teniendo en cuenta criterios tales como:</p>
+                      <ul>
+                        <li>Ha sido actualizado durante el año 2020</li>
+                        <li>Ha sido actualizado durante el año 2019</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store cumple <strong>0</strong> criterios de los enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store cumple <strong>1</strong> criterios de los enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store cumple <strong>todos</strong> los criterios de los enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!--Clientes-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m12-c2" aria-expanded="false" aria-controls="m12-c2" id="m12-c2" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m12-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;Clientes
+                    </a>
+                  </h6>
+                  <div id="m12-c2" class="collapse" aria-labelledby="m12-c2">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Esta métrica evalúa el estado de actividad del proyecto en base los clientes, teniendo en cuenta criterios tales como:</p>
+                      <ul>
+                        <li>Usado por un número elevado de clientes</li>
+                        <li>Usado por clientes de relevancia en su sector</li>
+                      </ul>
+                      <h6>Rango</h6>
+                      <p>Para esta métrica los valores posibles son <strong>[0,1,2]</strong></p>
+                      <table class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Interpretación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">0</th>
+                            <td>El Triple Store cumple <strong>0</strong> criterios de los enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>El Triple Store cumple <strong>1</strong> criterios de los enumerados</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>El Triple Store cumple <strong>todos</strong> los criterios de los enumerados</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h6>Benchmarks de rendimiento <span class="badge badge-dark float-right">2</span></h6>
+      </div>
+      <div class="card-body">
+        <h6 class="card-title">Relativos a:</h6>
+        <div id="accordion accordion-icons" id="accordionExample">
+
+          <!--Benchmarks de referencia-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m13" aria-expanded="false" aria-controls="m13" id="m13" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m13')"></i>
+                &nbsp;&nbsp;&nbsp;Benchmarks de referencia <span class="badge badge-dark float-right">2</span>
+              </a>
+            </h6>
+            <div id="m13" class="collapse" aria-labelledby="m13">
+              <div class="card-body">
+                <!--SP2B-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m13-c1" aria-expanded="false" aria-controls="m13-c1" id="m13-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m13-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;SP2B
+                    </a>
+                  </h6>
+                  <div id="m13-c1" class="collapse" aria-labelledby="m13-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Benchmark para estimar optimación, generalidad y beneficios en el mundo real realizado por la Universidad de Friburgo. Genera un conjunto de datos, con documentos arbitrariamente grandes con el formato de la biblioteca <a class="custom" href="https://dblp.uni-trier.de/">DBLP</a> (Base de datos en formato triple store sobre ciencias de la computación), y realiza consultas sobre ellos para medir el rendimiento.
+
+                        El generador de datos usa como modelo la base de datos <a class="custom"  href="https://dblp.uni-trier.de/">DBLP</a>, ya que tiene muchas características de los datos en el mundo real, como por ejemplo el carácter social,  e imita las correlaciones que existen en ella sobre entidades, tales como artículos, autores...., para crear los datos se analizan las frecuencias e interacciones de las entidades,  de forma que el resultado es los más fiel posible.</p>
+                      <h6>Valores obtenidos de Benchmark SP2B</h6>
+                      <p>Rango continuo de valores para distintos conjuntos de datos de <strong>250k, 1M y 5M</strong> obtenidos para operaciones de <strong>lectura</strong> con métricas para <strong>Tiempo (Media aritmética y Media geométrica), Consumo de memoria (Media aritmética)</strong></p>
+                      <h6>Aplicación en el Benchmark</h6>
+                      <p>Se ordenarán de menor a mayor las medidas de para cada uno de los Triple Stores evalaudos, de forma que se multiplicada por <strong>n-m</strong> (siendo n el número de Triple Stores y <strong>m</strong> la posición del ranking ordenado de frecuencias representada en un rango de 0 a n-1, donde 0 es la 1º posición y n-1 la última posición) la frecuencia en que aparece en la posición m, según la siguiente formula</p>
+                      <img src="assets/images/formula1.png" class="rounded mx-auto d-block" alt="Responsive image" alt="image" height="80px">
+                      <p>En caso de no tener valores para un determinado triple store, se omitirá el cálculo, y calculara 0 como peso para la métrica, y se aumentara la incertidumbre, exactamente en el peso omitido</p>
+                    </div>
+                  </div>
+                </div>
+                <!--BSBM-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m13-c2" aria-expanded="false" aria-controls="m13-c2" id="m13-c2" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m13-c2')"></i>
+                        &nbsp;&nbsp;&nbsp;BSBM
+                    </a>
+                  </h6>
+                  <div id="m13-c2" class="collapse" aria-labelledby="m13-c2">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Benchmark para facilitar la evaluación de los repositorios de la Web Semántica, siempre que expongan EndPoint SPARQL, ya sean bases de datos relacionales o Triple Stores. El modelo de datos se basa en comercio electrónico donde tenemos entidades para productos, proveedores y clientes, que publican comentarios sobre los productos. El patrón de consultas, cubre casos de uso de un cliente que busca un determinado producto.</p>
+                      <h6>Valores obtenidos de Benchmark BSBM</h6>
+                      <p>Rango continuo de valores para distintos conjuntos de datos de <strong>50k, 250k, 1M, 5M y 25M</strong> obtenidos para operaciones de <strong>lectura</strong> con métricas para <strong>Tiempo (Media aritmética y Media geométrica), Consumo de memoria (Media aritmética)</strong></p>
+                      <h6>Aplicación en el Benchmark</h6>
+                      <p>Se ordenarán de menor a mayor las medidas de para cada uno de los Triple Stores evalaudos, de forma que se multiplicada por <strong>n-m</strong> (siendo n el número de Triple Stores y <strong>m</strong> la posición del ranking ordenado de frecuencias representada en un rango de 0 a n-1, donde 0 es la 1º posición y n-1 la última posición) la frecuencia en que aparece en la posición m, según la siguiente formula</p>
+                      <img src="assets/images/formula1.png" class="rounded mx-auto d-block" alt="Responsive image" alt="image" height="80px">
+                      <p>En caso de no tener valores para un determinado triple store, se omitirá el cálculo, y calculara 0 como peso para la métrica, y se aumentara la incertidumbre, exactamente en el peso omitido</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--Benchmarks propios-->
+          <div class="card m-2">
+            <h6 class="card-header">
+              <a data-toggle="collapse" href="#m14" aria-expanded="false" aria-controls="m14" id="m14" class="d-block card-link" (click)="onClickLink($event.target.attributes.id)">
+                <i [ngClass]="getIcon('m14')"></i>
+                &nbsp;&nbsp;&nbsp;Benchmarks propios <span class="badge badge-dark float-right">1</span>
+              </a>
+            </h6>
+            <div id="m14" class="collapse" aria-labelledby="m14">
+              <div class="card-body">
+                <!--SP2B-->
+                <div class="card m-2">
+                  <h6 class="card-header">
+                    <a data-toggle="collapse" href="#m14-c1" aria-expanded="false" aria-controls="m14-c1" id="m14-c1" class="d-block card-link"  (click)="onClickLink($event.target.attributes.id)">
+                      <i [ngClass]="getIcon('m14-c1')"></i>
+                        &nbsp;&nbsp;&nbsp;Benchmark generado a partir del dataset de Murcia
+                    </a>
+                  </h6>
+                  <div id="m14-c1" class="collapse" aria-labelledby="m14-c1">
+                    <div class="card-body">
+                      <h6>Descripción</h6>
+                      <p>Benchmark para estimar rendimiento de los distintos Triple Stores con datos sintéticos, generados a partir de datos <strong>reales</strong> de la universidad de Murcia</p>
+                      <h6>Valores obtenidos de Benchmark SP2B</h6>
+                      <p>Rango continuo de valores para distintos conjuntos de datos de <strong>50k, 250k, 500k, 1M y 5M</strong> entidades que generaran aproximadamente <strong>400k, 2M, 4M, 8M y 40M</strong> de tripletas, obtenidos para operaciones de <strong>lectura y escritura</strong> con métricas para <strong>tiempo</strong> empleado</p>
+                      <h6>Aplicación en el Benchmark</h6>
+                      <p>Se ordenarán de menor a mayor las medidas de para cada uno de los Triple Stores evaluados, de forma que se multiplicada por <strong>n-m</strong> (siendo n el número de Triple Stores y <strong>m</strong> la posición del ranking ordenado de frecuencias representada en un rango de 0 a n-1, donde 0 es la 1º posición y n-1 la última posición) la frecuencia en que aparece en la posición m, según la siguiente formula</p>
+                      <img src="assets/images/formula1.png" class="rounded mx-auto d-block" alt="Responsive image" alt="image" height="80px">
+                      <p>En caso de no tener valores para un determinado triple store, se omitirá el cálculo, y calculara 0 como peso para la métrica, y se aumentará la incertidumbre, exactamente en el peso omitido</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+
+        </div>
+    </div>
+
+  </div>
+</div>

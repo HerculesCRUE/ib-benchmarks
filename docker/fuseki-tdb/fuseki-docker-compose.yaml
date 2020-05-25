@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  fuseki:
+    build: .
+    container_name: jena-fuseki
+    restart: always
+    environment:
+      - ADMIN_PASSWORD=pw123
+    ports:
+      - "3030:3030"
+    volumes:
+      - fuseki-data:/fuseki/databases/trellis
+      - fuseki-backup:/fuseki/databases/backups
+      #- ./fuseki-conf/config.ttl:/fuseki/config.ttl
+      #- ./fuseki-conf/trellis.ttl:/fuseki/trellis.ttl
+      #- ./fuseki-conf/shiro.ini:/fuseki/shiro.ttl
+      #- ./fuseki-conf/log4j.properties:/fuseki/log4j.properties
+volumes:
+  fuseki-data:
+  fuseki-backup:

@@ -1,0 +1,5 @@
+data/
+*.xlsx
+benchmarks.zip
+benchmarks_app/node_modules
+~$*

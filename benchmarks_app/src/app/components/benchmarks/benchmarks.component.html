@@ -1,0 +1,225 @@
+<div class="container m-5" *ngIf="measuresBenchmarksData.size > 0">
+
+  <h4>Benchmarks sobre Triple Stores</h4>
+  <br>
+  
+  <ul class="list-group m-3" *ngFor="let metricGroup of metrics">
+    <li class="list-group-item" >
+      <h5>{{ metricGroup.name }}</h5>
+      <div class="row">
+        <div class="col-sm-12">
+          {{ metricGroup.description }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <strong>Peso: </strong> {{ metricGroup.weight }}
+        </div>
+        <div class="col-sm-6">
+          <strong>Peso Relativo: </strong> {{metricGroup.relativeWeight*100 | number:'1.0-2'}}%
+        </div>
+      </div>
+
+      <ul class="list-group m-3" *ngFor="let metric of metricGroup.metrics | keyvalue">
+        <li class="list-group-item">
+          <h5>{{ metric.value.name }}</h5>
+          <div class="row">
+            <div class="col-sm-12">
+              {{ metric.value.description }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <strong>rango: </strong> [{{ metric.value.range }}]
+            </div>
+            <div class="col-sm-6">
+              <strong>Peso: </strong> {{ metric.value.weight }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <strong>Peso Relativo Padre: </strong> {{metric.value.relativeWeight*100 | number:'1.0-2'}}%
+            </div>
+            <div class="col-sm-6">
+              <strong>Peso Relativo Global: </strong> {{metric.value.relativeWeightParent*100 | number:'1.0-2'}}%
+            </div>
+          </div>
+
+
+          <div id="accordion" class="m-3">
+            <div class="card m-3">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" [attr.data-target]="'#data_' + metric.key"  aria-expanded="false" [attr.aria-controls]="'#data_' + metric.key">
+                    Datos en crudo
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="data_{{metric.key}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row m-3" *ngFor="let tables of getMeasureTables(metricGroup.id, metric.key) | keyvalue">
+                    <div class="col-sm-12">
+        
+                      <div class="table-wrapper m-3" >
+                        <h6>{{tables.value.name}}</h6>
+                        <p>{{tables.value.description}}</p>
+        
+                        <table class="table table-hover ">
+                          <thead class="thead">
+                            <th scope="col" *ngFor="let column of tables.value.table.columns">{{column}}</th>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let row of tables.value.table.rows">
+                              <td *ngFor="let v of row">
+                                {{v}}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="card m-3">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" [attr.data-target]="'#metrics_' + metric.key"  aria-expanded="true" [attr.aria-controls]="'#metrics_' + metric.key">
+                    Resultados
+                  </button>
+                </h5>
+              </div>
+              <div id="metrics_{{metric.key}}" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row m-3">
+                    <div class="col-sm-12">
+        
+                      <div class="table-wrapper">
+                        <table class="table table-hover ">
+                          <thead class="thead">
+                            <th scope="col" data-toggle="tooltip" data-placement="top" title="Nombre del Tripletore">TripleStore</th>
+                            <th scope="col" data-toggle="tooltip" data-placement="top" title="Valoración">Val.</th>
+                            <th scope="col" data-toggle="tooltip" data-placement="top" title="Puntos Acumulados">Ptos. Acum.</th>
+                            <th scope="col" data-toggle="tooltip" data-placement="top" title="Incertidumbre">Inc.</th>
+                            <th scope="col" data-toggle="tooltip" data-placement="top" title="Incertidumbre Acumulada">Inc. Acum.</th>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let tripleStore of triplestores" data-toggle="tooltip" data-placement="top" title="{{getMeasure(metricGroup.id, metric.key,tripleStore).comment | json}}">
+                                <td>{{getMeasure(metricGroup.id, metric.key,tripleStore).tripleStoreName}} <span  *ngIf="getMeasure(metricGroup.id, metric.key,tripleStore).comment!=''" class="badge badge-pill badge-primary float-right">1</span></td>
+                                <td>{{getMeasure(metricGroup.id, metric.key,tripleStore).value}} (+{{(getMeasure(metricGroup.id, metric.key,tripleStore).score)*100  | number:'1.0-3'}}%)</td>
+                                <td>{{(getMeasure(metricGroup.id, metric.key,tripleStore).scoreAgregate)*100  | number:'1.0-2'}}% / {{(getMeasure(metricGroup.id, metric.key,tripleStore).applicableRatioAgregate)*100  | number:'1.0-2'}}%</td>
+                                <td>{{(getMeasure(metricGroup.id, metric.key,tripleStore).uncertainty)*100  | number:'1.0-2'}}%</td>
+                                <td>{{(getMeasure(metricGroup.id, metric.key,tripleStore).uncertaintyAgregate)*100   | number:'1.0-2'}}%</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+<!-- 
+          <div class="row m-3" *ngFor="let tables of getMeasureTables(metricGroup.id, metric.key) | keyvalue">
+            <div class="col-sm-12">
+
+              <div class="table-wrapper m-3" >
+                <h6>{{tables.value.name}}</h6>
+                <p>{{tables.value.description}}</p>
+
+                <table class="table table-hover ">
+                  <thead class="thead">
+                    <th scope="col" *ngFor="let column of tables.value.table.columns">{{column}}</th>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let row of tables.value.table.rows">
+                      <td *ngFor="let v of row">
+                        {{v}}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+ -->
+<!-- 
+          <br>
+          <h6>Métricas:</h6>
+          <div class="row m-3">
+            <div class="col-sm-12">
+
+              <div class="table-wrapper">
+                <table class="table table-hover ">
+                  <thead class="thead">
+                    <th scope="col" data-toggle="tooltip" data-placement="top" title="Nombre del Tripletore">TripleStore</th>
+                    <th scope="col" data-toggle="tooltip" data-placement="top" title="Valoración">Val.</th>
+                    <th scope="col" data-toggle="tooltip" data-placement="top" title="Puntos Acumulados">Ptos. Acum.</th>
+                    <th scope="col" data-toggle="tooltip" data-placement="top" title="Incertidumbre">Inc.</th>
+                    <th scope="col" data-toggle="tooltip" data-placement="top" title="Incertidumbre Acumulada">Inc. Acum.</th>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let tripleStore of triplestores">
+                        <td>{{getMeasure(metricGroup.id, metric.key,tripleStore).tripleStoreName}} <span  class="badge badge-pill badge-primary float-right">1</span></td>
+                        <td>{{getMeasure(metricGroup.id, metric.key,tripleStore).value}} (+{{(getMeasure(metricGroup.id, metric.key,tripleStore).score)*100  | number:'1.0-3'}}%)</td>
+                        <td>{{(getMeasure(metricGroup.id, metric.key,tripleStore).scoreAgregate)*100  | number:'1.0-2'}}% / {{(getMeasure(metricGroup.id, metric.key,tripleStore).applicableRatioAgregate)*100  | number:'1.0-2'}}%</td>
+                        <td>{{(getMeasure(metricGroup.id, metric.key,tripleStore).uncertainty)*100  | number:'1.0-2'}}%</td>
+                        <td>{{(getMeasure(metricGroup.id, metric.key,tripleStore).uncertaintyAgregate)*100   | number:'1.0-2'}}%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div> -->
+          <!-- <td>{{getMeasure(metricGroup.id, metric.key,tripleStore).comment}}</td>
+          <div class="row m-3">
+            <div class="col-sm-12">
+
+              <div class="table-wrapper">
+
+                <table class="table table-hover ">
+                  <thead class="thead">
+                    <th scope="col">TripleStore</th>
+                    <th scope="col">Valoración</th>
+                    <th scope="col">Puntuación</th>
+                    <th scope="col">P. Acumulada</th>
+                    <th scope="col">Comentario</th>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let measure of getMeasure(metricGroup.id, metric.key) | keyvalue">
+                      <td>{{measure.value.tripleStoreName}}</td>
+                      <td>{{measure.value.value}}</td>
+                      <td>+{{(measure.value.score)*100  | number:'1.0-3'}}%</td>
+                      <td>{{(measure.value.scoreAgregate)*100  | number:'1.0-3'}}%</td>
+                      <td *ngIf="measure.value.tag != undefined; else noTag" data-toggle="tooltip" data-placement="top" title="{{measure.value.tag}}">
+                        <a *ngIf="measure.value.link != undefined; else noLink" href="{{measure.value.link}}">{{measure.value.comment}}<span *ngIf="measure.value.tag != undefined" class="badge badge-pill badge-primary float-right">1</span></a>
+                        <ng-template #noLink>{{measure.value.comment}}</ng-template>
+                      </td>
+                      <ng-template #noTag>
+                        <td>
+                          <a *ngIf="measure.value.link != undefined; else noLink" href="{{measure.value.link}}">{{measure.value.comment}}<span *ngIf="measure.value.tag != undefined" class="badge badge-pill badge-primary float-right">1</span></a>
+                          <ng-template #noLink>{{measure.value.comment}}</ng-template>
+                        </td>
+                      </ng-template>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          -->
+
+
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,73 @@
+<div class="container m-5" *ngIf="isDataReady()">
+
+  <h4>Resultados sobre Memoria Científico-Técnica Triple Stores ( Peso Relativo:  {{getMemoryRelativeWeight()*100 | number:'1.0-2'}}%)</h4>
+  <br>
+
+  <div class="table-wrapper m-3" >
+
+    <table class="table table-hover ">
+      <thead class="thead">
+        <th scope="col">Triple Store</th>
+        <th scope="col" data-toggle="tooltip" data-placement="top" title="Puntuación aplicable sobre el 100% de el grupo de Memoria Científico-Técnica">Puntución Total</th>
+        <th scope="col" data-toggle="tooltip" data-placement="top" title="Puntuación aplicable sobre el 100% total">Puntución Aplicable</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of memoryFinalData; let i = index" >
+          <td>{{row.tripleStoreName}}</td>
+          <td>{{row.scoreAgregate*100 | number:'1.0-2'}}% / 100%</td>
+          <td style="background: #E2E2E2;">{{row.scoreAgregate*getMemoryRelativeWeight()*100 | number:'1.0-2'}}% / {{getMemoryRelativeWeight()*100 | number:'1.0-2'}}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>Resultados sobre Benchmarks Triple Stores ( Peso Relativo:  {{getBenchmarksRelativeWeight()*100 | number:'1.0-2'}}%)</h4>
+  <br>
+
+  <div class="table-wrapper m-3" >
+
+    <table class="table table-hover ">
+      <thead class="thead">
+        <th scope="col">Triple Store</th>
+        <th scope="col" data-toggle="tooltip" data-placement="top" title="Puntuación aplicable sobre el 100% de el grupo de Benchmarks Triple Stores">Puntución Total</th>
+        <th scope="col" data-toggle="tooltip" data-placement="top" title="Incertidumbre sobre el Triple Store">Incertidumbre</th>
+        <th scope="col" data-toggle="tooltip" data-placement="top" title="Puntuación aplicable sobre el 100% total">Puntución Aplicable</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of benchmarksFinalData; let i = index" >
+          <td>{{row.tripleStoreName}}</td>
+          <td>{{row.scoreAgregate*100 | number:'1.0-2'}}% / {{(1-row.uncertaintyAgregate)*100 | number:'1.0-2'}}%</td>
+          <td>{{row.uncertaintyAgregate*100 | number:'1.0-2'}}% / {{(row.uncertaintyAgregate)*100 | number:'1.0-2'}}%</td>
+          <td style="background: #E2E2E2;">{{row.scoreAgregate*getBenchmarksRelativeWeight()*100 | number:'1.0-2'}}% / {{getBenchmarksRelativeWeight()*((1-row.uncertaintyAgregate)*100) | number:'1.0-2'}}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>Resultado Globlal por Triple Stores</h4>
+  <br>
+
+  <div class="table-wrapper m-3" >
+
+    <table class="table table-hover ">
+      <thead class="thead">
+        <th scope="col">Triple Store</th>
+        <th scope="col" data-toggle="tooltip" data-placement="top" title="Puntuación aplicable sobre el porcentaje final a aplicar de el grupo de Memoria sobre porcentaje total aplicable">P. Memoria</th>
+        <th scope="col" data-toggle="tooltip" data-placement="top" title="Puntuación aplicable sobre el porcentaje final a aplicar de el grupo de Benchmarks sobre porcentaje total aplicable">P. Benchmarks</th>
+        <th scope="col" data-toggle="tooltip" data-placement="top" title="Incertidumbre aplicada a la puntuación final">Incertidumbre</th>
+        <th scope="col" data-toggle="tooltip" data-placement="top" title="Puntuacion final (puntuación memoria + puntuación benchmark aplicando incertidumbre)">Puntuación final</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of finalData; let i = index" >
+          <td >{{row.tripleStoreName}}</td>
+          <td>{{row.finalMemoryScore*100 | number:'1.0-2'}}% / {{row.finalWeighMemory*100 | number:'1.0-2'}}%</td>
+          <td>{{row.finalBenchmarkScore*100 | number:'1.0-2'}}% / {{row.finalWeighBenchmark*100 | number:'1.0-2'}}%</td>
+          <td>{{(row.uncertaintyAgregate*row.finalWeighBenchmark)*100 | number:'1.0-2'}}%</td>
+          <td style="background: #E2E2E2;">{{(row.finalTotalScore)*100 | number:'1.0-2'}}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+</div>

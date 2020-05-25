@@ -1,0 +1,200 @@
+<div class="container m-5">
+
+  <div *ngIf="isDataReady()">
+    <div class="card card-cascade narrower">
+
+      <!--Card image-->
+      <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+          <div class="col-sm-6">
+            <h5>Pesos de memoria científico técnica</h5>
+          </div>
+          <div class="col-sm-4">
+            <label>Peso:</label>
+            <input type="number" min="0" class="form-control" id="weighthInEdit"
+              required
+              [(ngModel)]="memoryWeight"  name="memoryWeight" (ngModelChange)="saveWeights($event)">
+          </div>
+          <div class="col-sm-2">
+            <strong>%:</strong> {{(memoryWeight/(memoryWeight+benchmarksWeight)) | number:'1.0-2'}}%
+          </div>
+          
+      </div>
+      <!--/Card image-->
+    
+      <div class="px-4">
+    
+        <div class="table-wrapper">
+
+          <table class="table table-hover ">
+            <thead class="thead">
+              <th scope="col"></th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Peso</th>
+              <th scope="col">%</th>
+              <th scope="col">action</th>
+            </thead>
+            
+            <tbody>
+              <ng-container *ngFor="let item of memoryArrayData; index as i;" #bucle>
+                <tr data-toggle="collapse" [attr.data-target]="'#accordion_1_' + i" class="clickable">
+                  <td><i class="fa fa-plus"></i></td>
+                  <td><strong>{{item.name}}</strong></td>
+                  <td>{{item.description}}</td>
+                  <td>{{item.weight}}</td>
+                  <td>{{item.relativeWeight*100 | number:'1.0-2'}}%</td>
+                  <td class="minimal_cell"><button class="btn"><i class="fa fa-edit" (click)="editItem(i,null,'memory')" data-toggle="modal" data-target="#exampleModal"></i></button></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    <div id="accordion_1_{{i}}" class="collapse">
+                      <table class="table table-hover">
+                        <thead class="thead-dark">
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Descripción</th>
+                          <th scope="col">Rango</th>
+                          <th scope="col">Peso</th>
+                          <th scope="col">%</th>
+                          <th scope="col">action</th>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item2 of item.metrics| keyvalue" class="clickable">
+                            <td><strong>{{item2.value.name}}</strong></td>
+                            <td>{{item2.value.description}}</td>
+                            <td>{{item2.value.range}}</td>
+                            <td>{{item2.value.weight}}</td>
+                            <td>{{item2.value.relativeWeight*100 | number:'1.0-2'}}%</td>
+                            <td class="minimal_cell"><button class="btn"><i class="fa fa-edit" (click)="editItem(i,item2.key,'memory')" data-toggle="modal" data-target="#exampleModal"></i></button></td>
+                          </tr>
+                      </tbody>
+                      </table>            
+                    </div>
+                  </td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>  
+
+    <div class="card card-cascade narrower">
+
+      <!--Card image-->
+      <div
+        class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+        <div class="col-sm-6">
+          <h5>Pesos de Benchmarks</h5>
+        </div>
+        <div class="col-sm-4">
+          <label>Peso:</label>
+          <input type="number" min="0" class="form-control" id="weighthInEdit"
+            required
+            [(ngModel)]="benchmarksWeight"  name="benchmarksWeight" (ngModelChange)="saveWeights($event)">
+        </div>
+        <div class="col-sm-2">
+          <strong>%:</strong> {{(benchmarksWeight/(memoryWeight+benchmarksWeight)) | number:'1.0-2'}}%
+        </div>
+    
+      </div>
+      <!--/Card image-->
+    
+      <div class="px-4">
+    
+        <div class="table-wrapper">
+
+          <table class="table table-hover">
+            <thead class="thead-dark">
+              <th scope="col"></th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Peso</th>
+              <th scope="col">%</th>
+              <th scope="col">action</th>
+            </thead>
+            
+            <tbody>
+              <ng-container *ngFor="let item of benchmarkArrayData; index as i;" #bucle>
+                <tr data-toggle="collapse" [attr.data-target]="'#accordion_2_' + i" class="clickable">
+                  <td><i class="fa fa-plus"></i></td>
+                  <td><strong>{{item.name}}</strong></td>
+                  <td>{{item.description}}</td>
+                  <td>{{item.weight}}</td>
+                  <td>{{toFixedTrunc(item.relativeWeight*100)}}%</td>
+                  <td class="minimal_cell"><button class="btn"><i class="fa fa-edit" (click)="editItem(i,null,'bechmarks')" data-toggle="modal" data-target="#exampleModal"></i></button></td>
+                </tr>
+        
+                <tr>
+                  <td colspan="6">
+                    <div id="accordion_2_{{i}}" class="collapse">
+                      <table class="table table-hover">
+                        <thead class="thead-dark">
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Descripción</th>
+                          <th scope="col">Rango</th>
+                          <th scope="col">Peso</th>
+                          <th scope="col">%</th>
+                          <th scope="col">action</th>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item2 of item.metrics| keyvalue" class="clickable">
+                            <td><strong>{{item2.value.name}}</strong></td>
+                            <td>{{item2.value.description}}</td>
+                            <td>{{item2.value.range}}</td>
+                            <td>{{item2.value.weight}}</td>
+                            <td>{{item2.value.uncertainty}}</td>
+                            <td class="minimal_cell"><button class="btn"><i class="fa fa-edit" (click)="editItem(i,item2.key,'bechmarks')" data-toggle="modal" data-target="#exampleModal"></i></button></td>
+                          </tr>
+                      </tbody>
+                      </table>            
+                    </div>
+                  </td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>  
+
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edición de pesos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #metricForm="ngForm">
+          <div class="form-group">
+            <label for="nameInEdit">Nombre</label>
+            <input type="text" class="form-control" id="nameInEdit"
+                required
+                [(ngModel)]="nameInEdit" name="nameInEdit" readonly>
+            <label for="descriptionInEdit">Descripción</label>
+            <input type="text" class="form-control" id="descriptionInEdit"
+                required
+                [(ngModel)]="descriptionInEdit" name="descriptionInEdit" readonly>
+              <label for="weighthInEdit">Peso</label>
+              <input type="number" min="0" class="form-control" id="weighthInEdit"
+                  required
+                  [(ngModel)]="weighthInEdit" name="weighthInEdit">
+          </div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" data-dismiss="modal" (click)=onChange() >Submit</button>
+        </form>
+    </div>
+  </div>
+</div>
