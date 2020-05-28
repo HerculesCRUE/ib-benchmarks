@@ -1,0 +1,2112 @@
+{
+    "memory": [
+        {
+            "groupKey":"G_LICENCIA",
+            "metrics": [
+                { 
+                    "measureKey": "M_LICENCIA",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 0,
+                            "comment": "Comercial",
+                            "link": "https://db-engines.com/en/system/MarkLogic"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "OpenLink Virtuoso",
+                            "value": 1,
+                            "comment": "Comercial y GLP",
+                            "tag": "Comercial para versión 8.2 y GLP para veriones hasta 7.2.5.1",
+                            "link": "https://db-engines.com/en/system/Virtuoso"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 2,
+                            "comment": "GLP",
+                            "link": "https://db-engines.com/en/system/Apache+Jena+-+TDB"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "Comercial",
+                            "link": "https://db-engines.com/en/system/Amazon+Neptune"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Comercial y GLP limitada",
+                            "tag": "Comercial y GLP con funcionalidad limitada",
+                            "link": "https://db-engines.com/en/system/GraphDB"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Comercial y GLP limitada",
+                            "tag": "Comercial y GLP con funcionalidad limitada",
+                            "link": "https://db-engines.com/en/system/Stardog"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Comercial y GLP limitada",
+                            "tag": "Comercial y GLP con funcionalidad limitada",
+                            "link": "https://db-engines.com/en/system/AllegroGraph"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 2,
+                            "comment": "GLP",
+                            "link": "https://db-engines.com/en/system/Blazegraph"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 2,
+                            "comment": "GLP",
+                            "link": "https://db-engines.com/en/system/RDF4J"
+                        }
+                    ]
+                }
+            ]      
+
+        },
+        {
+            "groupKey":"G_INTEGRACIÓN",
+            "metrics":  [
+                {
+                    "measureKey": "M_RDF4J",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Si",
+                            "link": "https://docs.marklogic.com/sem:sparql"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Si",
+                            "link": "https://db-engines.com/en/system/Virtuoso"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Si",
+                            "link": "https://www.donaldmcintosh.net/blog/fuseki-commentary"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Si",
+                            "link": "https://db-engines.com/en/system/GraphDB"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si",
+                            "link": "https://db-engines.com/en/system/Stardog"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 0,
+                            "comment": "No, pero emulable con Sesame API",
+                            "link": "https://db-engines.com/en/system/AllegroGraph"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 2,
+                            "comment": "Si",
+                            "link": "https://db-engines.com/en/system/Blazegraph"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 2,
+                            "comment": "Si",
+                            "link": "https://db-engines.com/en/system/RDF4J"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_ACCESO",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 5,
+                            "comment": "AVA API, Node.js, ODBC Proprietary Optic API, RESTful HTTP API, SPARQL, WebDAV, XDBC, XQUERY, XSLT, SQL"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 5,
+                            "comment": "ADO.NET, GeoSPARQL, HTTP API, JDBC, Jena RDF API, ODBC, OLE DB, RDF4J API, RESTful HTTP API, Sesame REST HTTP Protocol, SOAP webservices, SPARQL 1.1, WebDAV, XPath, XQuery, XSLT"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 4,
+                            "tag": "falta ODBC",
+                            "comment": "SPARQL 1.1, Fuseki, Jena RDF API, RIO, TDB Java API",
+                            "link": "https://www.donaldmcintosh.net/blog/fuseki-commentary"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 4,
+                            "tag": "falta ODBC",
+                            "comment": "SPARQL 1.1, TinkerPop Gremlin 3.3, y APIs, C#, Go, Java, JavaScript, PHP, Python, Ruby, Scala"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 4,
+                            "tag": "falta ODBC",
+                            "comment": "GeoSPARQL, Java API, RDF4J API, RIO, Sail API, Sesame REST HTTP Protocol, SPARQL 1.1"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 5,
+                            "comment": "GraphQL query language, HTTP API, Jena RDF API, OWL, RDF4J API, Sesame REST HTTP Protocol, SNARL, SPARQL, Spring Data, Stardog Studio, TinkerPop 3"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 2,
+                            "tag": "falta ODBC, Framework y Otros",
+                            "comment": "RESTful HTTP API, SPARQL"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 3,
+                            "tag": "falta ODBC y Otros",
+                            "comment": "Java API, RESTful HTTP API, SPARQL QUERY, SPARQL UPDATE, TinkerPop 3"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 4,
+                            "tag": "falta ODBC",
+                            "comment": "Java API, RIO info, Sail API, SeRQL info, Sesame REST HTTP Protocol, SPARQL"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_DEPENDENCIAS",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 4,
+                            "tag": "Sin dependencias aparentes con SO, Librerías, Frameworks u otros",
+                            "comment": "Implementado en C++",
+                            "link": "https://docs.marklogic.com/guide/installation/procedures"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 4,
+                            "tag": "Sin dependencias aparentes con SO, Librerías, Frameworks u otros",
+                            "comment": "Implementado en C",
+                            "link": "http://vos.openlinksw.com/owiki/wiki/VOS/#How%20Do%20I%20Install%20Virtuoso%3F"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 4,
+                            "tag": "Sin dependencias aparentes con SO, Librerías, Frameworks u otros",
+                            "comment": "Implementado en Java",
+                            "link": "https://jena.apache.org/documentation/fuseki2/"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 5,
+                            "tag": "El estar disponible solo en la nube, la gestión de dependencias recae en Amazon",
+                            "comment": ""
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 4,
+                            "tag": "Sin dependencias aparentes con SO, Librerías, Frameworks u otros",
+                            "comment": "Implementado en Java",
+                            "link": "https://www.ontotext.com/try-graphdb-se/?utm_medium=ppc&utm_source=adwords&utm_term=graph%20db&utm_campaign=Search+Graphdb&hsa_ad=415688443158&hsa_cam=245047937&hsa_ver=3&hsa_src=g&hsa_kw=graph%20db&hsa_grp=59466313913&hsa_acc=9129462532&hsa_mt=p&hsa_net=adwords&hsa_tgt=aud-456464994631:kwd-351553045914&gclid=Cj0KCQjwncT1BRDhARIsAOQF9Ll3OTfXV3k9EmE8XUERY7JSydwwtLvVMZE3uSa832zaILTX4jQy-n0aAneTEALw_wcB"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 3,
+                            "tag": "Parece ser instalable solo en servidores sevian, Librerías, Frameworks u otros",
+                            "comment": "Implementado en Java",
+                            "link": "https://www.stardog.com/docs"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 3,
+                            "tag": "Parece ser instalable solo en servidores sevian, Librerías, Frameworks u otros",
+                            "comment": "Implementado en Java",
+                            "link": "https://franz.com/agraph/support/documentation/current/server-installation.html"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 4,
+                            "tag": "Sin dependencias aparentes con SO, Librerías, Frameworks u otros",
+                            "comment": "Implementado en Java",
+                            "link": "https://github.com/blazegraph/database/wiki/Installation_guide"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 4,
+                            "tag": "Sin dependencias aparentes con SO, Librerías, Frameworks u otros",
+                            "comment": "Implementado en Java",
+                            "link": "https://rdf4j.org/download/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_DESPLIEGUE",
+            "metrics":  [
+                {
+                    "measureKey": "M_CLUSTERING",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 2,
+                            "comment": "Escalado horizontal, con alta disponibilidad y reparto de carga",
+                            "link": "https://docs.marklogic.com/guide/cluster/clustering"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Alta disponibilidad, pero no mejora el rendimiento",
+                            "tag": "Todos los datos se replican en todos los nodos",
+                            "link": "http://vos.openlinksw.com/owiki/wiki/VOS/VirtClusteringDiagrams"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 0,
+                            "comment": "No es multinodo",
+                            "tag": "En cualquer caso asegura alto rendimiento en 1 solo nodo",
+                            "link": "https://jena.apache.org/documentation/tdb2/"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 2,
+                            "comment": "Escalado horizontal y alto rendimiento",
+                            "tag": "Ideado para trabajar de forma nativa en cluster"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "Si, desplegable en Cluster multinodo",
+                            "link": "http://graphdb.ontotext.com/documentation/enterprise/ee/cluster-basics.html"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 2,
+                            "comment": "Si, desplegable en Cluster multinodo",
+                            "link": "https://www.stardog.com/blog/stardog-3.0-high-availability-cluster/"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 0,
+                            "comment": "Si, desplegable en Cluster multinodo",
+                            "link": "https://franz.com/agraph/support/documentation/current/replication.html"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 2,
+                            "comment": "Si, desplegable en Cluster multinodo",
+                            "link": "https://github.com/blazegraph/database/wiki/ClusterGuide"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 0,
+                            "comment": "No"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_DOCKER",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 0,
+                            "comment": "No dispone de imagen oficial en DockerHub, aunque se puede crear de forma sencilla",
+                            "link":"https://www.marklogic.com/blog/building-a-marklogic-docker-container/"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Imagen no oficial en DockerHub, pero existen varias no oficiales",
+                            "link": "http://vos.openlinksw.com/owiki/wiki/VOS/VirtuosoDocker#Building%20a%20VOS%20Base%20Image"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Imagen no oficial en DockerHub, pero existen varias no oficiales",
+                            "link": "http://vos.openlinksw.com/owiki/wiki/VOS/VirtuosoDocker#Building%20a%20VOS%20Base%20Image"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "Solo como servicio Amazon"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "Con imagen ofiacial en DockerHub",
+                            "link":"https://hub.docker.com/r/ontotext/graphdb/"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 2,
+                            "comment": "Con imagen ofiacial en DockerHub",
+                            "link":"https://www.stardog.com/docs"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 2,
+                            "comment": "Con imagen ofiacial en DockerHub",
+                            "link":"https://franz.com/agraph/docker/"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Imagen no oficial en DockerHub, pero existen varias no oficiales",
+                            "link": "https://hub.docker.com/r/nawer/blazegraph/"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 2,
+                            "comment": "Con imagen ofiacial en DockerHub",
+                            "link":"https://hub.docker.com/r/eclipse/rdf4j-workbench"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_INTEGRIDAD",
+            "metrics":  [
+                {
+                    "measureKey": "M_CONSISTENCIA",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Consitencia inmediata"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Consitencia inmediata"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Consitencia inmediata"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 1,
+                            "comment": "Consitencia inmediata"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "Consitencia inmediata o Consitencia eventual (Según configuración)"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Consitencia inmediata"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 2,
+                            "comment": "Consitencia inmediata o Consitencia eventual (Según configuración)"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 2,
+                            "comment": "Consitencia inmediata o Consitencia eventual (Según configuración)"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Consitencia inmediata"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_TRANSACCIONES",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Transaciones ACID",
+                            "link":"https://es.wikipedia.org/wiki/ACID"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Transaciones ACID",
+                            "link":"https://es.wikipedia.org/wiki/ACID"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Transaciones ACID",
+                            "link":"https://es.wikipedia.org/wiki/ACID"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 1,
+                            "comment": "Transaciones ACID",
+                            "link":"https://es.wikipedia.org/wiki/ACID"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Transaciones ACID",
+                            "link":"https://es.wikipedia.org/wiki/ACID"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Transaciones ACID",
+                            "link":"https://es.wikipedia.org/wiki/ACID"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Transaciones ACID",
+                            "link":"https://es.wikipedia.org/wiki/ACID"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Transaciones ACID",
+                            "link":"https://es.wikipedia.org/wiki/ACID"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Transaciones ACID",
+                            "link":"https://es.wikipedia.org/wiki/ACID"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_SEGURIDAD",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 2,
+                            "comment": "Autentificación y Autorización",
+                            "tag": "Seguridad avanzada",
+                            "link":"https://www.marklogic.com/product/marklogic-database-overview/security/"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 2,
+                            "comment": "Autentificación y Autorización",
+                            "tag": "Seguridad avanzada de grano fino ABAC (Attribute-Based Access Control), en adicción RBAC (Role-Based Access Control) de acuerdo con los estandares SQL. Soporta Autentificación LDAP, Active Directory y Kerberos",
+                            "link":"http://docs.openlinksw.com/virtuoso/rdfgraphsecurity/"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 2,
+                            "comment": "Autentificación y Autorización",
+                            "tag": "Apache Shiro a partir de Fuseki",
+                            "link":"https://jena.apache.org/documentation/fuseki2/fuseki-security.html"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 2,
+                            "comment": "Si, la proporcionada por amazon (IAM)",
+                            "link":"https://aws.amazon.com/es/neptune/"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "Autentificación y Autorización",
+                            "tag": "Si , por roles",
+                            "link":"http://graphdb.ontotext.com/documentation/standard/secure-graphdb-server.html"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 2,
+                            "comment": "Autentificación y Autorización",
+                            "tag": "kerberos",
+                            "link":"https://www.stardog.com/docs/#_security"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 2,
+                            "comment": "Autentificación y Autorización",
+                            "tag": "Si, por roles",
+                            "link":"https://franz.com/agraph/support/documentation/current/security-overview.html"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Autentificación y Autorización",
+                            "tag": "No, solo via contenedor de aplicaciones (Tomcat o Jetty)",
+                            "link":"https://blog.blazegraph.com/?p=307"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Autentificación y Autorización",
+                            "tag": "No, solo via contenedor de aplicaciones (Tomcat o Jetty)",
+                            "link":"https://rdf4j.org/documentation/tools/server-workbench/"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "C_CONCURRENCIA",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Si"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_FORMATOS",
+            "metrics":  [
+                {
+                    "measureKey": "M_FORMATOS",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 5,
+                            "comment": "Ingesta de XML, JSON, RDF, Conexión a otras Bases de datos"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 5,
+                            "comment": "HTML, CSV, JSON, XML, RDF-Turtle, y muchos otros"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Formatos RDF"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "Conexion a otras bases de datos y JSON",
+                            "link": "http://graphdb.ontotext.com/documentation/standard/loading-data.html"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si, CSV"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 3,
+                            "comment": "Si JSON , CSV y formatos RDF",
+                            "link": "https://www.stardog.com/blog/importing-exploring-and-exporting-your-data-with-stardog-studio/"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Formatos RDF"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Formatos RDF"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_FUNCIONALIDAD",
+            "metrics":  [
+                {
+                    "measureKey": "M_TRIGGER",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Si, por medio de Event Handler"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si, por event handler"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Si"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_SCRIPTS",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Si mediante Java Server Pluggin"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si, mediante extensión Java"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Si, mediante JavaScript"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Si"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_INDEXACION",
+            "metrics":  [
+                {
+                    "measureKey": "M_INDEX",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Si"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_BUSQUEDA",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Si, con Apache Lucene"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Si, opcional",
+                            "link": "http://docs.openlinksw.com/virtuoso/virtuosofaq8/"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Si, combinando Fuseki SPARQL con Lucene o Elasticsearch",
+                            "link": "https://jena.apache.org/documentation/query/text-query.html"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 1,
+                            "comment": "Si",
+                            "link": "https://docs.aws.amazon.com/neptune/latest/userguide/full-text-search-gremlin.html"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Si, sincronización en tiempo real con indices SOLR/Elastic search/Lucene y GeoSPARQL",
+                            "link": "https://db-engines.com/en/system/GraphDB"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si, mediante Lucene",
+                            "link": "https://www.stardog.com/docs"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Si, mediante SOLR",
+                            "link": "https://franz.com/agraph/support/documentation/current/text-index.html"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Si, Mesiante SOLR"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Si, Mesiante Lucene",
+                            "link": "https://rdf4j.org/javadoc/latest/org/eclipse/rdf4j/sail/lucene/LuceneSail.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_USABILIDAD",
+            "metrics":  [
+                {
+                    "measureKey": "M_DOCUMENTACION",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 2,
+                            "comment": "Si, documentación adecuada",
+                            "link": "https://www.marklogic.com/"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 2,
+                            "comment": "Si, documentación adecuada",
+                            "link": "https://virtuoso.openlinksw.com/"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 2,
+                            "comment": "Si, documentación adecuada",
+                            "link": "https://jena.apache.org/documentation/tdb2/"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 2,
+                            "comment": "Si, documentación adecuada",
+                            "link": "https://aws.amazon.com/es/neptune/"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "Si, documentación adecuada",
+                            "link": "http://graphdb.ontotext.com/"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 2,
+                            "comment": "Si, documentación adecuada",
+                            "link": "https://www.stardog.com/"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Si, pero no es clara",
+                            "link": "https://franz.com/agraph/allegrograph/"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Si, pero no parece muy completa",
+                            "link": "https://blazegraph.com/"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Si, pero no parece muy completa",
+                            "link": "https://aws.amazon.com/es/neptune/"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_FACILIDAD",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 2,
+                            "comment": "Si"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_COMUNIDAD",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Parece que la comunidad de usuarios es menor, cuesta mas encontrar documentación"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 2,
+                            "comment": "Si"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_LD",
+            "metrics":  [
+                {
+                    "measureKey": "M_RAZONADOR",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Fuzzy Logic",
+                            "link": "https://developer.marklogic.com/features/smart-mastering/"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Si, en la versión comercial"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Si, con Apache Fuseki",
+                            "link": "https://github.com/jfmunozf/Jena-Fuseki-Reasoner-Inference/wiki/Configuring-Apache-Jena-Fuseki-2.4.1-inference-and-reasoning-support-using-SPARQL-1.1:-Jena-inference-rules,-RDFS-Entailment-Regimes-and-OWL-reasoning"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Si",
+                            "link": "https://franz.com/agraph/support/documentation/current/reasoner-tutorial.html"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Si",
+                            "link": "https://rdf4j.org/"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_VALIDACION",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 2,
+                            "comment": "Si, mediante extensión",
+                            "link": "https://github.com/rouzbe/shacl-xqy"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 2,
+                            "comment": "Si, en la versión comercial"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 2,
+                            "comment": "Si, con Apache Fuseki",
+                            "link": "https://jena.apache.org/documentation/shacl/index.html"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "Si",
+                            "link": "http://graphdb.ontotext.com/documentation/free/shacl-validation.html"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 2,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 2,
+                            "comment": "Si",
+                            "link": "http://graphdb.ontotext.com/documentation/free/shacl-validation.html"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 2,
+                            "comment": "Si",
+                            "link": "https://rdf4j.org/"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_RECONCILIACION",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 0,
+                            "comment": "No"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_FUNCIONES_DATOS",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 0,
+                            "comment": "No"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 0,
+                            "comment": "Si, mediante plugin",
+                            "link": "https://blazegraph.com/tinkerpop3/apidocs/com/blazegraph/gremlin/structure/BlazeGraph.html"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 0,
+                            "comment": "No"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_PROTOCOLOS",
+            "metrics":  [
+                {
+                    "measureKey": "M_SPARQL",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Si"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 1,
+                            "comment": "Si"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_POPULARIDAD",
+            "metrics":  [
+                {
+                    "measureKey": "M_POPULARIDAD",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 8,
+                            "comment": "Puntutacion 10.96",
+                            "tag": "Puntuación: 10.96, Tendencia: -0.67"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 7,
+                            "comment": "Puntutacion 10.96",
+                            "tag": "Puntuación: 2.96, Tendencia: -0.24"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 6,
+                            "comment": "Puntutacion 2.45",
+                            "tag": "Puntuación: 2.45, Tendencia: -0.03"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 5,
+                            "comment": "Puntutacion 1.81",
+                            "tag": "Puntuación: 1.81, Tendencia: -0.01"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 4,
+                            "comment": "Puntutacion 1.16",
+                            "tag": "Puntuación: 1.16, Tendencia: -0.01"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 3,
+                            "comment": "Puntutacion 0.96",
+                            "tag": "Puntuación: 0.96, Tendencia: 0.17"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 2,
+                            "comment": "Puntutacion 0.01",
+                            "tag": "Puntuación: 0.01, Tendencia: 0.83"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Puntutacion 0",
+                            "tag": "Puntuación: 0, Tendencia: 0.64"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 0,
+                            "comment": "Puntutacion 0",
+                            "tag": "Puntuación: 0, Tendencia: 0.42"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "groupKey":"G_ESTADO",
+            "metrics":  [
+                {
+                    "measureKey": "M_ACTUALIZACION",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 0,
+                            "comment": "Versión 8, 2017"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 1,
+                            "comment": "Versión 8.3, Mayo 2019"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 1,
+                            "comment": "Versión 3.12.0, Mayo 2019"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 0,
+                            "comment": "2017"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 1,
+                            "comment": "Versión 8.8, Mayo 2019"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 1,
+                            "comment": "Versión 6.2.3, Mayo 2019"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 2,
+                            "comment": "Versión 7.0, Abril 2020"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 1,
+                            "comment": "Versión 2.1.5, Marzo 2019"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 0,
+                            "comment": "2016"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "M_CLIENTE",
+                    "measures": [
+                        {
+                            "tripleStoreId": "MarkLogic",
+                            "tripleStoreName": "MarkLogic",
+                            "value": 2,
+                            "comment": "Bien situada en la lista Fortune 1000, con una fuerte presencia en los servicios financieros, el sector público, los medios y el entretenimiento, la publicación, la fabricación, la energía, los seguros, la atención médica, la farmacia y biología"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Virtuoso",
+                            "value": 2,
+                            "comment": "European Union (EU), US Government, Deutsche Bank, Schneider Electronics, Bayer, Syngenta, Bloomberg, Viacom, BASF, Sanofi, GE, Pharma & Healthcare, Bioinformatics and Life Sciences, Retail, Insurance, Government, Petroleum (Oil, Natural Gas, etc.), Telco, Manufacturing"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "Apache TDB2 + Fuseki",
+                            "value": 2,
+                            "comment": "Está en uso de producción para clientes de Fortune 500"
+                        },
+                        {
+                            "tripleStoreId": "Neptune",
+                            "tripleStoreName": "Amazon Neptune",
+                            "value": 2,
+                            "comment": "Samsung Electronics, Pearson, Intuit, Siemens, AstraZeneca, FINRA, LifeOmic, Blackfynn, and Amazon Alexa"
+                        },
+                        {
+                            "tripleStoreId": "GraphDB",
+                            "tripleStoreName": "GraphDB",
+                            "value": 2,
+                            "comment": "BBC, Press Association, Financial Times, DK, Euromoney, The British Museum, Getty Trust, UK Parliament, Raytheon, Korea Telecom, Springer Nature, Elsevier, Oxford University Press, Wiley, S&P Global Platts, and many others"
+                        },
+                        {
+                            "tripleStoreId": "Stardog",
+                            "tripleStoreName": "Stardog",
+                            "value": 2,
+                            "comment": "Bosch, Dow Jones, Elsevier, Ericsson, Morgan Stanley, NASA, NIH, Nokia, Salesforce, Siemens, Springer, Raytheon y más",
+                            "link": "https://www.stardog.com/customers/"
+                        },
+                        {
+                            "tripleStoreId": "AllegroGraph",
+                            "tripleStoreName": "AllegroGraph",
+                            "value": 2,
+                            "comment": "Novartis, N3, Ford, Credit Suisse, Australian Government, NGA, Standford University, Merck, Fujitsu, Siemens"
+                        },
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 2,
+                            "comment": "Está en uso de producción para clientes de Fortune 500 como EMC, Autodesk y muchos otros"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "RDF4J",
+                            "value": 0,
+                            "comment": "Sin información"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "benchmarks": [
+        {            
+            "groupKey":"G_B_REFERENCIA",
+            "metrics": [
+                {
+                    "measureKey": "1_M_B_SP2B",
+                    "link": "https://arxiv.org/pdf/0806.4627.pdf",
+                    "tables": [
+                        {
+                            "name": "Tiempo (MA)",
+                            "description": "Tiempo medio por media aritmética",
+                            "table": {
+                                "columns": [
+                                    "#Items","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["250k","491.87","639.86","546"],
+                                    ["1M","901.73","653.17","850.06"],
+                                    ["5M","1154.80","860.33","870.16"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Tiempo (MA): Frecuencia de ranking y puntuacion final",
+                            "description": "Frecuencia de ranking y puntuacion final para triplestores analizados, mediada por tiempo medio por media aritmética, la puntuación total se calcula multiplicando x3 la frecuencia de 1º posición, x2 la frecuencia de 1º posición y x1 la frecuencia de 3º posición",
+                            "table": {
+                                "columns": [
+                                    "#Frec","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["#1", "1", "2", "0"],
+                                    ["#2", "0", "0", "3"],
+                                    ["#3", "2", "1", "0"],
+                                    ["Puntuación","5","7","6"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Tiempo (MG)",
+                            "description": "Tiempo medio por media geométrica",
+                            "table": {
+                                "columns": [
+                                    "#Items","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["250k", "56.35","6.79","1.31"],
+                                    ["1M","179.42","10.17","3.03"],
+                                    ["5M","671.41","22.91","8.96"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Tiempo (MG): Frecuencia de ranking y puntuacion final",
+                            "description": "Frecuencia de ranking y puntuacion final para triplestores analizados, mediada por tiempo medio por media geométrica, la puntuación total se calcula multiplicando x3 la frecuencia de 1º posición, x2 la frecuencia de 1º posición y x1 la frecuencia de 3º posición",
+                            "table": {
+                                "columns": [
+                                    "#Frec","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["#1", "0", "2", "0"],
+                                    ["#2", "0", "0", "3"],
+                                    ["#3", "3", "1", "0"],
+                                    ["Puntuación","3","7","6"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Memoria",
+                            "description": "Consumo de memoria (media aritmética)",
+                            "table": {
+                                "columns": [
+                                    "#Items","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["250k", "318.25","73.92","377.6"],
+                                    ["1M","525.61","145.97","888.72"],
+                                    ["5M","1347.55","196.33","1072.84"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Memoria: Frecuencia de ranking y puntuacion final",
+                            "description": "Frecuencia de ranking y puntuacion final para triplestores analizados, mediada por consumo de memoria, la puntuación total se calcula multiplicando x3 la frecuencia de 1º posición, x2 la frecuencia de 1º posición y x1 la frecuencia de 3º posición",
+                            "table": {
+                                "columns": [
+                                    "#Frec","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["#1", "0", "2", "0"],
+                                    ["#2", "2", "0", "3"],
+                                    ["#3", "1", "1", "0"],
+                                    ["Puntuación","5","7","6"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Total: Frecuencia de ranking y puntuacion final",
+                            "description": "Suma de las Frecuencias de ranking y puntuacion final anteriores",
+                            "table": {
+                                "columns": [
+                                    "#Frec","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["#suma", "13", "23", "16"],
+                                    ["#ratio", "0.565217391", "1", "0.695652174"]
+                                ]
+                            }
+                        }
+                    ],
+                    "measures": [
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "APACHE TDB2 + FUSEKI",
+                            "value": 13,
+                            "score": 0.565217391,
+                            "correction": 1,
+                            "comment": "Parece que se comporta mejor con conjuntos de datos pequeños, en cuanto a tiempo y consumo de memoría",
+                            "link": "https://docs.marklogic.com/guide/installation/procedures"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Openlink Virtuoso",
+                            "value": 16,
+                            "score": 0.695652174,
+                            "correction": 1,
+                            "comment": "Se aprecia un buen rendimiento, pero un consumo de memoria bastante alto, probablemente debido a el número de indices en memoria",
+                            "link": "https://docs.marklogic.com/guide/installation/procedures"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "Eclipse RDF4J",
+                            "value": 22,
+                            "score": 1,
+                            "correction": 0.5,
+                            "comment": "La memoria parece hablar de RDF4J en memoria, por lo que es discutible el resultado, motivo por el cual se aplica corrección",
+                            "link": "https://docs.marklogic.com/guide/installation/procedures"
+                        }
+                    ]
+                },
+                {
+                    "measureKey": "2_M_B_BSBM",
+                    "link": "http://wifo5-03.informatik.uni-mannheim.de/bizer/pub/BizerSchulz-BerlinSPARQLBenchmark.pdf",
+                    "tables": [
+                        {
+                            "name": "Tiempo (Lectura)",
+                            "description": "Tiempo medio de lectura por media aritmética",
+                            "table": {
+                                "columns": [
+                                    "#Items","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["50k","23.40","9.4","162"],
+                                    ["250k","72.9","28.5","162.8"],
+                                    ["1M","268.00","115.2","201.4"],
+                                    ["5M","1406.6","569.1","476.8"],
+                                    ["25M","7623.96","3038.00","2089.11"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Tiempo (Lectura): Frecuencia de ranking y puntuacion final",
+                            "description": "Frecuencia de ranking y puntuacion final para triplestores analizados, mediada por tiempo medio por media aritmética, la puntuación total se calcula multiplicando x3 la frecuencia de 1º posición, x2 la frecuencia de 1º posición y x1 la frecuencia de 3º posición",
+                            "table": {
+                                "columns": [
+                                    "#Frec","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["#1", "0", "3", "2"],
+                                    ["#2", "2", "2", "1"],
+                                    ["#3", "3", "0", "2"],
+                                    ["Puntuación","7","13","10"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Tiempo (Escritura)",
+                            "description": "Tiempo medio de escritura por media aritmética",
+                            "table": {
+                                "columns": [
+                                    "#Items","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["50k","5.00","3.00","2.00"],
+                                    ["250k","24.00","18.00","33.00"],
+                                    ["1M","116.00","132.00","87.00"],
+                                    ["5M","1053.00","1988.00","609.00"],
+                                    ["25M","13306.00","27674.00","49096.00"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Tiempo (MG): Frecuencia de ranking y puntuacion final",
+                            "description": "Frecuencia de ranking y puntuacion final para triplestores analizados, mediada por tiempo medio por media geométrica, la puntuación total se calcula multiplicando x3 la frecuencia de 1º posición, x2 la frecuencia de 1º posición y x1 la frecuencia de 3º posición",
+                            "table": {
+                                "columns": [
+                                    "#Frec","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["#1", "1", "1", "3"],
+                                    ["#2", "3", "2", "0"],
+                                    ["#3", "1", "2", "3"],
+                                    ["Puntuación","10","9","12"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Total: Frecuencia de ranking y puntuacion final",
+                            "description": "Suma de las Frecuencias de ranking y puntuacion final anteriores",
+                            "table": {
+                                "columns": [
+                                    "#Frec","TDB2","RDF4J","Virtuoso"
+                                ],
+                                "rows": [
+                                    ["#suma", "17", "22", "22"],
+                                    ["#ratio", "0.772727273", "1", "1"]
+                                ]
+                            }
+                        }
+                    ],
+                    "measures": [
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "APACHE TDB2 + FUSEKI",
+                            "value": 17,
+                            "score": 0.772727273,
+                            "correction": 1,
+                            "comment": "Las métricas parecen ser mejores en escritura, cuanto mayor es el volumen de datos",
+                            "link": "https://docs.marklogic.com/guide/installation/procedures"
+                        },
+                        {
+                            "tripleStoreId": "Virtuoso",
+                            "tripleStoreName": "Openlink Virtuoso",
+                            "value": 22,
+                            "score": 1,
+                            "correction": 1,
+                            "comment": "Las métricas parecen ser mejores en lecutura, cuanto mayor es el volumen de datos",
+                            "link": "https://docs.marklogic.com/guide/installation/procedures"
+                        },
+                        {
+                            "tripleStoreId": "RDF4J",
+                            "tripleStoreName": "Eclipse RDF4J",
+                            "value": 22,
+                            "score": 1,
+                            "correction": 0.5,
+                            "comment": "La memoria parece hablar de RDF4J en memoria, por lo que es discutible el resultado",
+                            "link": "https://docs.marklogic.com/guide/installation/procedures"
+                        }
+                    ]
+                }
+            ]
+        },
+        {            
+            "groupKey":"G_B_PROPIOS",
+            "metrics": [
+                {
+                    "measureKey": "1_M_B_PROPIOS",
+                    "tables": [
+                        {
+                            "name": "Tiempo (Lectura) para <strong>BlazeGraph</strong>",
+                            "description": "Tiempo medio de lectura para todas las queries testeadas y media aritmética",
+                            "table": {
+                                "columns": [
+                                    "#Items","#RDFs (aprox.)","Query 1","Query 2","Query 3","Query 4", "Média Aritmética"
+                                ],
+                                "rows": [
+                                    ["50k","400k","0.033","0.022","0.5","0.028","0.028"],
+                                    ["250k","400k","0.036","0.021","0.639","0.0137","0.177425"],
+                                    ["500k","400k","0.0759","0.0229","1.4291","0.0279","0.38895"],
+                                    ["1M","400k","0.053","0.0329","2.9541","0.027","0.76675"],
+                                    ["5M","400k","0.085","0.0369","16.4482","0.059","4.157275"]
+                                ]
+                            }
+
+                        },
+                        {
+                            "name": "Tiempo (Lectura) para <strong>TDB2</strong>",
+                            "description": "Tiempo medio de lectura para todas las queries testeadas y media aritmética",
+                            "table": {
+                                "columns": [
+                                    "#Items","#RDFs (aprox.)","Query 1","Query 2","Query 3","Query 4", "Média Aritmética"
+                                ],
+                                "rows": [
+                                    ["50k","400k","0.0677","15.351222","1.066817","7.800106","6.07146125"],
+                                    ["250k","400k","0.013002","23.949527","0.881751","7.956429","8.20017725"],
+                                    ["500k","400k","0.010995","30.055681","1.008468","8.378793","9.86348425"],
+                                    ["1M","400k","0.011002","31.07324","0.927235","8.034584","10.01151525"],
+                                    ["5M","400k","0.010017","36.973381","1.00472","10.692471","12.17014725"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Agregado de Tiempo Medio (Lectura)",
+                            "description": "Tiempo medio de lectura para todos los conjuntos de datos testeados y media aritmética",
+                            "table": {
+                                "columns": [
+                                    "#Items","#RDFs (aprox.)","BlazeGraph","TDB2"
+                                ],
+                                "rows": [
+                                    ["50k","400k","0.14575","6.07146125"],
+                                    ["250k","400k","0.177425","8.20017725"],
+                                    ["500k","400k","0.38895","9.86348425"],
+                                    ["1M","400k","0.76675","10.01151525"],
+                                    ["5M","400k","4.157275","12.17014725"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Tiempo (Lectura): Frecuencia de ranking y puntuacion final",
+                            "description": "Frecuencia de ranking y puntuacion final para triplestores analizados, mediada por tiempo medio por media aritmetica, la puntuación total se calcula multiplicando x3 la frecuencia de 1º posición, x2 la frecuencia de 1º posición y x1 la frecuencia de 2º posición",
+                            "table": {
+                                "columns": [
+                                    "#Frec","BlazeGraph","TDB2"
+                                ],
+                                "rows": [
+                                    ["#1", "5", "0"],
+                                    ["#2", "0", "5"],
+                                    ["Puntuación","10","5"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Agregado de Tiempo Medio (Escritura)",
+                            "description": "Tiempo medio de escritura para todos los conjuntos de datos testeados y media aritmética",
+                            "table": {
+                                "columns": [
+                                    "#Items","#RDFs (aprox.)","BlazeGraph","TDB2"
+                                ],
+                                "rows": [
+                                    ["50k","400k","3.359767","6.593503"],
+                                    ["250k","400k","20.491031","25.14688"],
+                                    ["500k","400k","64.409978","51.678684"],
+                                    ["1M","400k","229.808336","107.107056"],
+                                    ["5M","400k","2781.86716","600.239002"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Tiempo (Escritura): Frecuencia de ranking y puntuacion final",
+                            "description": "Frecuencia de ranking y puntuacion final para triplestores analizados, mediada por tiempo medio por media geométrica, la puntuación total se calcula multiplicando x2 la frecuencia de 1º posición y x1 la frecuencia de 2º posición",
+                            "table": {
+                                "columns": [
+                                    "#Frec","BlazeGraph","TDB2"
+                                ],
+                                "rows": [
+                                    ["#1", "2", "3"],
+                                    ["#2", "3", "2"],
+                                    ["Puntuación","7","8"]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Total: Frecuencia de ranking y puntuacion final en Lectura y escritura",
+                            "description": "Suma de las Frecuencias de ranking y puntuacion final anteriores",
+                            "table": {
+                                "columns": [
+                                    "#Frec","BlazeGraph","TDB2"
+                                ],
+                                "rows": [
+                                    ["#suma", "17", "13"],
+                                    ["#ratio", "1", "0.764705882352941"]
+                                ]
+                            }
+                        }
+                    ],
+                    "measures": [
+                        {
+                            "tripleStoreId": "BlazeGraph",
+                            "tripleStoreName": "BlazeGraph",
+                            "value": 17,
+                            "score": 1,
+                            "correction": 1,
+                            "comment": "Las métricas son muy buenas en lectura y ofrecen una crecimiento cerca de ser lineal con el número de elementos"
+                        },
+                        {
+                            "tripleStoreId": "TDB2",
+                            "tripleStoreName": "TDB2 + Fuseki",
+                            "value": 13,
+                            "score": 0.764705882352941,
+                            "correction": 1,
+                            "comment": "Las métricas de lectura se ven penalizadas especialmente en la query 2 que hace que la media se dispare, en cualquier caso son peores que las de Blazegraph"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
