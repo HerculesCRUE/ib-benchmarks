@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MetricsService } from '../../service/metrics.service';
 import { TripleStore } from '../../models/triple-store'
 
+
 @Component({
   selector: 'app-triple-store',
   templateUrl: './triple-store.component.html',
@@ -22,7 +23,7 @@ export class TripleStoreComponent implements OnInit {
     this.tripleStoreData = this.service.getTripleStoreData();
     this.tripleStoreDataArray = this.service.getTripleStoreArrayData();
     //alert(Math.ceil(this.tripleStoreData.size/2));
-    console.log('tam',this.tripleStoreDataArray.length);
+    // console.log('tam',this.tripleStoreDataArray.length);
   }
 
   waitForData(metricsService: MetricsService) {

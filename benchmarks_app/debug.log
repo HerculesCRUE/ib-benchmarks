@@ -1,0 +1,10 @@
+[0609/113544.426:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0609/123446.187:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0609/123446.189:ERROR:exception_snapshot_win.cc(98)] thread ID 17868 not found in process
+[0609/123446.189:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
+[0609/145334.659:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0610/100748.857:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0610/104118.300:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0610/104118.303:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0610/104118.534:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
+[0610/123024.565:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)

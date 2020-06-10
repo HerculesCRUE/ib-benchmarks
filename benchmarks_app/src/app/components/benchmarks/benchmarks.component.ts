@@ -14,7 +14,7 @@ import { TripleStore } from 'src/app/models/triple-store';
 })
 export class BenchmarksComponent implements OnInit {
 
-  service: MetricsService;
+  public service: MetricsService;
   measuresBenchmarksData: Map<string, Map<string, Map<string,Map<string,Measure>>>>;
   metrics: Array<MetricGroup> = new Array<MetricGroup>();
   aggregateBenchmarksValue: Map<string,number>;

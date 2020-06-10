@@ -1,6 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeightsComponent } from './weights.component';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {HttpClientModule} from '@angular/common/http';
+import { MetricsService } from '../../service/metrics.service';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from '../../../environments/environment';
+import { EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 describe('WeightsComponent', () => {
   let component: WeightsComponent;
@@ -8,7 +16,14 @@ describe('WeightsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WeightsComponent ]
+      declarations: [ WeightsComponent ],
+      imports: [
+        HttpClientModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireStorageModule,
+        FormsModule
+      ], 
+      providers: [MetricsService]
     })
     .compileComponents();
   }));
@@ -19,7 +34,7 @@ describe('WeightsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create a WeigthComponent', () => {
     expect(component).toBeTruthy();
   });
 });

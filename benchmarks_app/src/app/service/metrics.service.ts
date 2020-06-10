@@ -6,6 +6,8 @@ import { TripleStore} from '../models/triple-store';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Measure } from '../models/measure';
 import { Weight } from '../models/weight';
+import { EventEmitter } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
@@ -31,12 +33,14 @@ export class MetricsService {
   benchmarksMemoryDict = new Array();
 
   dataIsReady = false;
-  storageFirebase:AngularFireStorage;
+  public storageFirebase:AngularFireStorage;
 
   tripleStores = new Map();
   tripleStoresArray = new Array();
 
   weights = new Map<string,Weight>();
+
+  public eventDataIsReady  = new EventEmitter();
 
   constructor(private http: HttpClient,private storage: AngularFireStorage) { 
     // Read data from backet
@@ -58,7 +62,7 @@ export class MetricsService {
     fileRef.getDownloadURL().subscribe(url=>{
       //console.log('url:',url);
       this.getJSON(url).subscribe(jsonData => {
-        //console.log('datos:',jsonData);
+        console.log('Estoy recuperando datos:',jsonData);
         this.data = jsonData;
         if (jsonData['memoria']) {
           let jsonMemory = jsonData['memoria'];
@@ -156,20 +160,28 @@ export class MetricsService {
         } 
 
         this.calculateScoreAndAgregate();
+        this.dataIsReady = true;
+        this.eventDataIsReady.next({data: 'true'});
       });
-      this.dataIsReady = true;
+      //this.dataIsReady = true;
+      //this.eventDataIsReady.next({data: 'true'});
     });
     
   }
 
   populateWeights(storage: AngularFireStorage) {
+    console.log('Cargando pesos....');
     const fileRef = this.storageFirebase.ref(this.WEIGHTS_BACKET);
     fileRef.getDownloadURL().subscribe(url=>{
+      console.log('Cargando pesos from URL', url);
       this.getJSON(url).subscribe(jsonData => {
+        console.log('Cargando pesos from JSON', url);
         const mWeigtht = new Weight('memory',jsonData['memory']);
+        console.log('Memory Weight....', mWeigtht);
         this.weights.set(mWeigtht.id,mWeigtht);
         const bWeigtht = new Weight('benchmars',jsonData['benchmars']);
         this.weights.set(bWeigtht.id,bWeigtht);
+        console.log('Weights Load', this.weights);
         //console.log('service weights:',this.weights );
         this.populateMetrics(storage);
       });
@@ -455,6 +467,15 @@ export class MetricsService {
     })
     this.calculatePercentWeights();
   }
+
+  public async getIsDataReady() {
+    return new Promise((resolve, reject) => {
+      this.eventDataIsReady.subscribe(response=>{
+        resolve(response);
+      });
+    })
+  }
   
+
 
 }

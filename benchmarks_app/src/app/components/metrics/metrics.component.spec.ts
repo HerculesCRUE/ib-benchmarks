@@ -1,6 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MetricsComponent } from './metrics.component';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {HttpClientModule} from '@angular/common/http';
+import { MetricsService } from '../../service/metrics.service';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from '../../../environments/environment';
+import { EventEmitter } from '@angular/core';
 
 describe('MetricsComponent', () => {
   let component: MetricsComponent;
@@ -8,7 +15,13 @@ describe('MetricsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MetricsComponent ]
+      declarations: [ MetricsComponent ],
+      imports: [
+        HttpClientModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireStorageModule,
+      ], 
+      providers: [MetricsService]
     })
     .compileComponents();
   }));
@@ -22,4 +35,6 @@ describe('MetricsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
 });
