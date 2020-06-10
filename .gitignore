@@ -2,4 +2,5 @@ data/
 *.xlsx
 benchmarks.zip
 benchmarks_app/node_modules
+data/sintetic_data
 ~$*
