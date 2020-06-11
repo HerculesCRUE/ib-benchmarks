@@ -120,7 +120,7 @@ ng serve
 
 http://localhost:4200
 
-![image-20200525074916076](C:/Users/druiz/repositorios/UM/benchmarks/images/app.png)
+![image-20200525074916076](./images/app.png)
 
 También se encuentra desplegada en el entorno de desarrollo de la universidad de Murcia, accesible mediante el siguiente enlace
 
