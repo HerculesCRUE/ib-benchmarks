@@ -120,12 +120,9 @@ ng serve
 
 http://localhost:4200
 
-<<<<<<< HEAD
+
 ![image-20200525074916076](./images/app.png)
 =======
-![image-20200525074916076](C:/Users/druiz/repositorios/UM/benchmarks/images/app.png)
->>>>>>> hotfix/linking_data
-
 También se encuentra desplegada en el entorno de desarrollo de la universidad de Murcia, accesible mediante el siguiente enlace
 
 http://herc-iz-front-desa.atica.um.es:8081/benchmarks
