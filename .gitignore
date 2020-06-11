@@ -3,4 +3,5 @@ data/
 benchmarks.zip
 benchmarks_app/node_modules
 data/sintetic_data
+benchmarks_app/.idea/
 ~$*
