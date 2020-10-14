@@ -8,4 +8,4 @@ ng test
 
 Tras lo cual se ejecutaran todos los test definidos, y podremos visualizar el resultado en http://localhost:9876/
 
-![resultados test](C:/Users/druiz/repositorios/UM/benchmarks_solved/benchmarks/images/test.png)
+![resultados test](./images/test.png)
