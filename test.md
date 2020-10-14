@@ -1,6 +1,6 @@
 ### Pruebas unitarias
 
-Para generar los resultados de la evaluación de pruebas unitarias de la aplicación angular es necesario ejecutar el comando:
+Los test se evalúan con Karma. Para generar los resultados de la evaluación de pruebas unitarias de la aplicación angular es necesario ejecutar el comando:
 
 ```
 ng test
