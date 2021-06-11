@@ -19,7 +19,7 @@ Existen varias formas de despliegue que describiremos a continuación:
 
 ### Ejecución con Angular_CLI
 
-[Angular CLI](https://cli.angular.io/), es una herramienta de desarrollo Web, diseñada para facilitar tareas comunes a los desarrolladores tales como creación, generación, ejecución, testing o despliegue.
+[Angular CLI](https://cli.angular.io/), es una herramienta de desarrollo Web, diseñada para facilitar tareas comunes a los desarrolladores tales como creación, generación, ejecución, testing o despliegue. Para este proyecto usaremos la versión 7.3.9
 
 Los únicos requisitos son tener instalados previamente Node.js y NPM, en caso de no estar instalados previamente se pueden descargar ambos en el siguiente [enlace](https://nodejs.org/es/download/).
 

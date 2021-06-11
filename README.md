@@ -10,7 +10,7 @@
 | Objetivo       | El presente documento pretende ser la documentación técnica relativa a el entregable de Benchmarks. Para ello, se documentan tanto aspectos relativos al despliegue de la aplicación, como otros aspectos de interés. |
 | Estado         | Implementada al **100%**, según la funcionalidad prevista para cubrir lo expresado en el documento [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md). |
 | Próximos pasos | En caso de encontrar argumentos de peso para ello, seria posible capturar métricas para otros triple stores |
-| Documentación  | [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md) |
+| Documentación  | [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md) |
 
 # Benchmark y Memoria científico técnica
 
@@ -20,7 +20,7 @@ El proyecto, consta de varias fases:
 
 ## Análisis de  Benchmark existentes 
 
-Para dicha evaluación se han usado como referencia los Benchmarks SPB2, LUBM, BSBM y HOBBIT y los resultado de dicho análisis se recogen en el documento [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md), aunque para las métricas presentes en esta evaluación se han usado únicamente los datos obtenidos para SPB2 y BSBM. Se desecha LUBM, por no encontrar documentación suficiente acerca de los resultados del Benchmark para aplicar las métricas resultantes, y HOBBIT por estar demasiado orientado a Wikibase y por lo tanto no tener la generalidad necesaria para aplicarlo a otros triple stores.
+Para dicha evaluación se han usado como referencia los Benchmarks SPB2, LUBM, BSBM y HOBBIT y los resultado de dicho análisis se recogen en el documento [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md), aunque para las métricas presentes en esta evaluación se han usado únicamente los datos obtenidos para SPB2 y BSBM. Se desecha LUBM, por no encontrar documentación suficiente acerca de los resultados del Benchmark para aplicar las métricas resultantes, y HOBBIT por estar demasiado orientado a Wikibase y por lo tanto no tener la generalidad necesaria para aplicarlo a otros triple stores.
 
 ## Benchmark propio
 

@@ -234,7 +234,7 @@ Respuesta
 
 #### Configuración Trellis para conectar con el Triplestore a partir de el EndPoint SPARQL
 
-A partir del proyecto Trellis personalizado para le proyecto [asio-ldp](https://git.izertis.com/universidaddemurcia/semantmurc/asio-ldp), es necesario modificar el fichero config-dev.yml (la línea resources para que apunte al Endpoint SPARQL de Fuseki con el dataset del proyecto).
+A partir del proyecto Trellis personalizado para le proyecto [asio-ldp](https://github.com/HerculesCRUE/ib-asio-ldp), es necesario modificar el fichero config-dev.yml (la línea resources para que apunte al Endpoint SPARQL de Fuseki con el dataset del proyecto).
 
 ```bash
 server:
